@@ -44,7 +44,7 @@ A **bilingual Arabic-English web platform** that guides Egyptian and Arab learne
 
 ---
 ## 📄 Project Analysis
-You can read the full problem, solution, and key features [here](./Project%20Analysis.md).
+You can read the full document [here](./project-analysis.md).
 
 ## 🚀 Getting Started
 
