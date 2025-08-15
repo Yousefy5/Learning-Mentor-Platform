@@ -37,12 +37,6 @@ A **bilingual Arabic-English web platform** that guides Egyptian and Arab learne
 
 ---
 
-## 📌 Project Status
-
-> 🚧 **In Development** – Currently building the MVP with core roadmap features and quiz system.  
-
-
----
 ## 📄 Project Analysis
 You can read the full document [here](./project-analysis.md).
 
