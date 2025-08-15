@@ -57,5 +57,3 @@ By combining **clear structure**, **best-in-class resources**, and **both online
 
 <hr>
 
-Similar Websites:
-[[Similar Websites]]
