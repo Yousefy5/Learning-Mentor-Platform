@@ -51,7 +51,11 @@ flex-direction: column;
 header{
 display: flex;
 flex-direction: column;
+<<<<<<< HEAD
 margin-top: 5%;
+=======
+margin-top: 8%;
+>>>>>>> 2fff9bd62bb14a40e3440abd4ccaa963b9c62284
 margin-left: 10%;
 }
 
@@ -89,7 +93,11 @@ margin-bottom: 2rem;
   grid-template-rows: repeat(2, auto);   /* 2 صفوف */
   gap: 2rem;
   max-height: calc(2 * 200px + 2rem); 
+<<<<<<< HEAD
   /* overflow: hidden; */
+=======
+  overflow: hidden; /* تخفي أي صفوف زيادة */
+>>>>>>> 2fff9bd62bb14a40e3440abd4ccaa963b9c62284
   
 }
 
@@ -183,6 +191,7 @@ button:hover {
   grid-template-columns: repeat(4, 1fr); 
   gap: 2rem;
   max-height: calc(2 * 200px + 2rem); 
+<<<<<<< HEAD
   /* overflow: hidden;  */
   margin-top: 1%;
 }
@@ -195,6 +204,16 @@ display: flex;
 flex-direction: column;
 }
 
+=======
+  overflow: hidden; 
+  margin-top: 1%;
+}
+
+.headAch{
+margin-top: 5%;
+
+}
+>>>>>>> 2fff9bd62bb14a40e3440abd4ccaa963b9c62284
 .headCenter{
 margin-top: 5%;
 margin-bottom: 1rem;
@@ -206,7 +225,11 @@ margin-bottom: 1rem;
   grid-template-rows: repeat(2, auto);  
   gap: 2rem;
   max-height: calc(2 * 200px + 2rem); 
+<<<<<<< HEAD
   /* overflow: hidden;  */
+=======
+  overflow: hidden; 
+>>>>>>> 2fff9bd62bb14a40e3440abd4ccaa963b9c62284
 
 }
 .center{
@@ -220,6 +243,7 @@ font-weight: 400;
  .savedCenters .center button{
     width: 90%;
     height: 30%;
+<<<<<<< HEAD
     color: rgb(85, 83, 83);
   padding: 10px 20px;
   border-radius: 8px;
@@ -227,6 +251,11 @@ font-weight: 400;
   font-size: 13px;
   border-color: #4a4545;
   margin-top: 0.5rem;
+=======
+    border-radius: 5%;
+    color: rgb(85, 83, 83);
+    margin-top: 0.5rem;
+>>>>>>> 2fff9bd62bb14a40e3440abd4ccaa963b9c62284
 }
 .center p{
     padding: 0.3rem 0.3rem;
@@ -238,6 +267,7 @@ display: flex;
 gap: 0.5rem;
 }
 
+<<<<<<< HEAD
 
 /* MOBILE */
 @media only screen and (max-width:767px) {
@@ -366,6 +396,8 @@ padding-top:70rem;
 
 
 
+=======
+>>>>>>> 2fff9bd62bb14a40e3440abd4ccaa963b9c62284
 .footer {
     background-color: #fff;
     font-size: 0.85rem;
@@ -386,3 +418,7 @@ padding-top:70rem;
 .footer a:hover {
     color: #018a83;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2fff9bd62bb14a40e3440abd4ccaa963b9c62284
