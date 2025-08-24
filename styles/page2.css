@@ -1,9 +1,9 @@
+
 * {
     scroll-behavior: smooth;
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #fff;
 }
 
 /*==================================================================================*/
@@ -52,26 +52,6 @@ body {
     color: #000;
     font-weight: 520;
 }
-@media (min-width: 991px) {
-    .nav-link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background-color: #018a83;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-    }
-    .nav-link:hover::before,
-    .nav-link.active::before {
-        width: 100%;
-        visibility: visible;
-    }
-}
-
 
 #MyAccBtn {
     background-color: #fff;
@@ -93,146 +73,125 @@ body {
     outline: none;
     box-shadow: 0 0 0 2px rgba(1, 138, 131, 0.5);
 }
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fff;
+        padding: 1rem;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 18%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #018a83;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 35%;
+        visibility: visible;
+    }
+    #MyAccountBtn {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
+
+
 /*==================================================================================*/
-/*            End Navbar                                                         */
+/*            End Navbar                                                            */
 /*==================================================================================*/
 
 
 
 
-/*====================================================================================
-/*         Start Roadmap Page Styles
-/*====================================================================================*/
+/*==================================================================================*/
+/*            Start Placement Quiz                                                  */
+/*==================================================================================*/
 
-
-.roadmap-page {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
+.quiz-card {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+    border: none;
+    border-radius: 1rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-height: 700px) {
+    .quiz-card {
+        min-height: auto;
+    }
+}
+.progress {
+    height: 6px;
+}
+.question-block {
+    flex: 1;
 }
 
-/* Headings */
-.roadmap-page h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #2b2b33;
-
+#progress-bar {
+    background-color: #018a83 !important;
 }
-.roadmap-page p {
-    font-size: 0.9rem;
-    color: #555;
-    max-width: 500px;
-    margin: 0 auto;
-    line-height: 1.7;
+#next-btn {
+    background-color: #018a83;
+    border: none;
 }
 
-/* Module Titles */
-.text-module {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin: 2rem 0 1.5rem;
-    color: #018a83;
-    position: relative;
+#next-btn:hover {
+    background-color: #026d67;
 }
 
-.text-module::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #018a83;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-/* Progress Bar */
-.roadmap-page .progress {
-    height: 12px;
-    border-radius: 6px;
-    background-color: #eaeaea;
-    overflow: hidden;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.roadmap-page .progress-bar {
-    background: linear-gradient(90deg, #018a83, #0d6efd);
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #fff;
+#prev-btn,
+#next-btn {
+    min-width: 120px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Cards */
-.roadmap-page .card {
-    margin: 15px auto;
-    border: none;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-.roadmap-page .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+body {
+    display: flex;
+    flex-direction: column;
 }
 
-.roadmap-page .card img {
-    height: 160px;
-    object-fit: cover;
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
 }
 
-.roadmap-page .card-body {
-    padding: 1.5rem;
-}
-
-.roadmap-page .card-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #2b2b33;
-    margin-bottom: 0.5rem;
-}
-
-.roadmap-page .card-text {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-}
-
-/* Buttons inside cards */
-.roadmap-page .btn {
-    border-radius: 8px;
-    margin-top: 12px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 6px 16px;
-    transition: background 0.3s ease;
-}
-
-.roadmap-page .btn-primary {
-    background: #018a83;
-    border: none;
-}
-
-.roadmap-page .btn-primary:hover {
-    background: #016f6a;
-}
+/*==================================================================================*/
+/*            End Placement Quiz                                                    */
+/*==================================================================================*/
 
 
-/*====================================================================================
-/*         End Roadmap Page Styles
-/*====================================================================================*/
-
-
-
-
+/*   You    */
+/*   Can    */
+/*   Write  */
+/*   Your   */
+/*   Code   */
+/*   Here   */
 
 
 /*==================================================================================*/
@@ -263,3 +222,4 @@ body {
 /*==================================================================================*/
 /*            End Footer                                                         */
 /*==================================================================================*/
+
