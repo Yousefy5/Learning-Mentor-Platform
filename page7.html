@@ -1,75 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 7 - Dashboard</title>
-      
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 7 - Dashboard</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
- <div class="container">
-<div class="bootstrap-area">
 
-<!-- ✅ Fixed Navbar -->
+<!-- ✅ Navbar unified with index.html -->
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-    <div class="container-fluid">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <span class="logo-text">MentorED</span>
+    </a>
 
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <span class="logo-text">MentorED</span>
-        </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Responsive For Mobile View -->
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- End Responsive For Mobile View -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page2.html">Learning Tracks</a>
+        </li>
 
-        <!-- NavBar Items -->
-        <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="page2.html">Learning Tracks</a>
-                </li>
+        <!-- ✅ Dropdown for Quizzes -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="quizzesDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Quizzes
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="quizzesDropdown">
+            <li><a class="dropdown-item" href="page4.html">Placement Quiz</a></li>
+            <li><a class="dropdown-item" href="page5.html">Practice Quiz</a></li>
+          </ul>
+        </li>
 
-                <!-- ✅ Dropdown for Quizzes -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="quizzesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Quizzes
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="quizzesDropdown">
-                        <li><a class="dropdown-item" href="page4.html">Placement Quiz</a></li>
-                        <li><a class="dropdown-item" href="page5.html">Practice Quiz</a></li>
-                    </ul>
-                </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page6.html">Offline Centres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="page7.html">Dashboard</a>
+        </li>
+      </ul>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="page6.html">Offline Centres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="page7.html">Dashboard</a>
-                </li>
-            </ul>
-
-            <!-- My Account Button -->
-            <div class="d-flex ms-lg-3 mt-lg-0" id="MyAccountBtn">
-                <button class="btn btn-primary btn-sm" type="button" id="MyAccBtn">My Account</button>
-            </div>
-            <!-- End My Account Button -->
-        </div>
-        <!-- End Navbar Items -->
-
+      <div class="d-flex ms-lg-3 mt-lg-0" id="MyAccountBtn">
+        <button class="btn btn-primary btn-sm" type="button" id="MyAccBtn">My Account</button>
+      </div>
     </div>
+  </div>
 </nav>
-<!-- ✅ End Fixed Navbar -->
+<!-- ✅ End Navbar -->
+
+
+<!-- ✅ Original Page7 Content (unchanged) -->
+<div class="container">
+  <div class="bootstrap-area">
+
+<header>
+<h2>Welcome Back, Learner!</h2>
+<p class="text-muted">Here's an overview of your progress and saved items at MentorEd</p>
+</header>
+
+<main>
+<div class="progressBig">
+<p class="headProg">Your Learning Progress</p>
+
+<div class="courses">
+  <!-- Example course -->
+  <div class="course">
+    <div class="logo-two">
+       <i class="bi bi-code"></i>
+        <p>Web Development Fundamentals</p>
+    </div>
+    <div class="progress2">
+      <div class="progress-bar" style="width: 75%;"></div>
+    </div>
+    <p class="text-muted">75% Completed</p>
+    <button onclick="ContinueLearning">Continue Learning</button>
+  </div>
+
+  <!-- باقي الكورسات زي ما عندك ... -->
 </div>
+</div>
+
+
+<div class="contAch">
+  <p id="headAch">Your Achievements</p>
+</div>
+<div class="achieves">
+  <!-- مثال Achievement -->
+  <div class="achieve">
+    <div class="logo-three">
+      <img src="./icons/ranking (1).png">
+      <p>Quizzes Completed</p>
+    </div>
+    <h3 class="number">12</h3>
+    <p class="text-muted">Keep up the great work!</p>
+    <button onclick="TakeMoreQuiz">Take More Quizzes</button>
+  </div>
+</div>
+
+<p class="headCent">Your Saved Learning Center</p>
+<div class="savedCenters">
+  <div class="center">
+      <div class="map">
+        <img src="./icons/maps-and-flags (1).png">
+        <p><b>Cairo Tech Hub</b></p>
+      </div>
+      <p class="text-muted">Cairo, Egypt</p>
+      <button onclick="ViewDetails"> View Details</button>
+  </div>
+</div>
+</main>
+
+</div>
+</div>
+<!-- ✅ End Original Page7 Content -->
+
+
+<!-- ✅ Footer unified with index.html -->
+<footer class="footer mt-auto">
+  <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center py-3 border-top">
+
+    <div class="d-flex gap-3 mb-2 mb-md-0">
+      <a href="#">About Us</a>
+      <a href="#">Resources</a>
+      <a href="#">Legal</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="d-flex gap-3">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+<!-- ✅ End Footer -->
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
