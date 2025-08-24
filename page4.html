@@ -1,26 +1,23 @@
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Slide 3</title>
+    <title>Placement Quiz</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/page4.css">
 </head>
 <body>
 
-<!--NavBar-->
+<!-- ✅ Navbar unified with page2 -->
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-
     <div class="container-fluid">
-
         <a class="navbar-brand d-flex align-items-center" href="index.html">
             <span class="logo-text">MentorED</span>
         </a>
 
-        <!-- Responsive For Mobile View -->
+        <!-- Mobile button -->
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
@@ -29,46 +26,44 @@
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- End Responsive For Mobile View -->
 
-        <!-- NavBar Items -->
-        <div class="collapse navbar-collapse " id="navbarNav">
-
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+                <!-- Learning Tracks -->
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="page2.html">Learning Tracks</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="page3.html">Learning Tracks</a>
+
+                <!-- ✅ Quizzes Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="quizzesDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Quizzes
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="quizzesDropdown">
+                        <li><a class="dropdown-item active" href="page4.html">Placement Quiz</a></li>
+                        <li><a class="dropdown-item" href="page5.html">Practice Quiz</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="page4.html">Quizzes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="page6.html">Offline Centres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
+
+                <li class="nav-item"><a class="nav-link" href="page6.html">Offline Centres</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
             </ul>
 
             <!-- My Account Button -->
-
             <div class="d-flex ms-lg-3 mt-lg-0" id="MyAccountBtn">
                 <button class="btn btn-primary btn-sm" type="button" id="MyAccBtn">My Account</button>
             </div>
-
-            <!-- End My Account Button -->
         </div>
-        <!-- End Navbar Items -->
-
     </div>
 </nav>
-<!-- End NavBar -->
+<!-- End Navbar -->
 
 
 <!-- Start Placement Quiz -->
-
 <div class="container d-flex justify-content-center">
     <div class="quiz-card">
 
@@ -91,7 +86,7 @@
             <button id="next-btn" class="btn text-white">Next</button>
         </div>
 
-        <!-- Finish Screen (hidden by default, same size as quiz content) -->
+        <!-- Finish Screen -->
         <div id="finish-container" class="text-center question-block" style="display: none;">
             <h4 class="fw-bold mb-3">🎉 Quiz Finished!</h4>
             <p class="text-muted">You’ve completed all the questions.</p>
@@ -99,32 +94,18 @@
         </div>
     </div>
 </div>
-
 <!-- End Placement Quiz -->
 
 
-<!--                    -->
-<!--        YOU         -->
-<!--        CAN         -->
-<!--        WRITE       -->
-<!--        YOUR        -->
-<!--        CODE        -->
-<!--        HERE        -->
-<!--                    -->
-
-
-<!--Footer-->
-
+<!-- ✅ Footer unified with page2 -->
 <footer class="footer mt-auto">
     <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center py-3 border-top">
-
         <div class="d-flex gap-3 mb-2 mb-md-0">
             <a href="#">About Us</a>
             <a href="#">Resources</a>
             <a href="#">Legal</a>
             <a href="#">Contact Us</a>
         </div>
-
         <div class="d-flex gap-3">
             <a href="#"><i class="bi bi-facebook"></i></a>
             <a href="#"><i class="bi bi-twitter"></i></a>
@@ -133,16 +114,9 @@
         </div>
     </div>
 </footer>
-
-
-<!--End Footer-->
+<!-- End Footer -->
 
 <script src="scripts/page4.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
