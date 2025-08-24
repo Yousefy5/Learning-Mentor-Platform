@@ -145,7 +145,11 @@ main .courses .course button {
   margin-top: 1rem;
 }
 
-
+.headCent {
+  padding: 1.9rem;
+  font-weight: 700;
+  font-size:1.5rem;
+} 
 
 .progress-bar {
   background-color: #008C8C;
@@ -157,6 +161,7 @@ main .courses .course button {
 
 button:hover {
   background-color: #03342c; 
+  color: white;
 }
 
 .logo-two {
@@ -242,7 +247,6 @@ gap: 0.5rem;
 /* MOBILE */
 @media only screen and (max-width:767px) {
    body{
-    background: greenyellow;
     box-sizing: border-box;
      /* overflow: hidden;  */
   }
@@ -263,19 +267,32 @@ header{
   padding-bottom: 60rem;
 }
 
+.headCent {
+  padding-top: 10rem;
+  font-weight: 700;
+  font-size:1.5rem;
+}
 .savedCenters{
     display: flex;
   flex-direction: column;
 }
 
 .savedCenters .center button {
-  margin-top: 4%;
-  width: 50%;
+      width: 90%;
+    height: 30%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  border-color: #4a4545;
+  margin-top: 0.5rem;
 }
 .contAch #headAch{
-padding-top:70rem;
+padding-top:80rem;
 }
-
+.savedCenters{
+  padding-bottom: 40rem;
+}
 } 
 
 
