@@ -1,0 +1,333 @@
+* {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*==================================================================================*/
+/*            Start Navbar                                                         */
+/*==================================================================================*/
+
+.navbar {
+    background-color: #fff;
+    height: 56px;
+    padding: 0.5rem;
+}
+.logo-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #018a83;
+
+}
+/*.navbar-brand {/*Logo Customization, Yet to ADD*/
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler-icon {
+    filter: invert(40%) sepia(80%) saturate(400%) hue-rotate(130deg);
+}
+
+.nav-link {
+    color: #2b2b33;
+    font-weight: 500;
+    font-size: 0.8rem;
+
+    position: relative;
+}
+
+
+.logo-text:hover,
+.logo-text.active
+{
+    color: #2b2b33;
+}
+.nav-link:hover,
+.nav-link.active
+{
+    color: #000;
+    font-weight: 520;
+}
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #018a83;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fff;
+        padding: 1rem;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 18%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #018a83;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 35%;
+        visibility: visible;
+    }
+    #MyAccountBtn {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
+
+
+#MyAccBtn {
+    background-color: #fff;
+    color: #2b2b33;
+    border: 1px solid #2b2b33;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+#MyAccBtn:hover {
+    color: #fff;
+    background-color: #018a83;
+    border: none;
+}
+#MyAccBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(1, 138, 131, 0.5);
+}
+/*==================================================================================*/
+/*            End Navbar                                                         */
+/*==================================================================================*/
+
+
+/*====================================================================================
+/*         Start Centersc Page Styles
+/*====================================================================================*/
+
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filters .dropdown select,
+.filters button {
+    height: 42px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #DEE1E6;
+}
+
+.filters button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #018a83;
+    color: white;
+    border: none;
+    margin: 12px 0;
+}
+
+.filters button:hover {
+    background: #016f6a;
+}
+
+/* map */
+.map {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.map img {
+    width: 100%;
+    max-width: 1182px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.centers-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Headings */
+.centers-page h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2b2b33;
+
+}
+.centers-page p {
+    font-size: 0.9rem;
+    color: #555;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* Cards */
+.centers-page .card {
+    margin: 15px auto;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.centers-page .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.centers-page .card img {
+    height: 160px;
+    object-fit: cover;
+}
+
+.centers-page .card-body {
+    padding: 1.5rem;
+}
+
+.centers-page .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2b2b33;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.centers-page .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Buttons inside cards */
+.card .btn {
+    border-radius: 8px;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.card .main {
+    padding: 10px 16px;
+
+}
+
+.card .btn-primary {
+    background: #018a83;
+    border: none;
+}
+
+.card .btn-primary:hover {
+    background: #016f6a;
+}
+
+.card .content .extra {
+    width: fit-content;
+    font-size: 12px;
+    background-color: #e06500;
+    border-radius: 9999px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.card .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: flex-start;
+}
+
+
+
+
+/*====================================================================================
+/*         End Centers Styles
+/*====================================================================================*/
+
+
+
+
+/*==================================================================================*/
+/*            Start Footer                                                         */
+/*==================================================================================*/
+
+.footer {
+    background-color: #fff;
+    font-size: 0.85rem;
+    color: #2b2b33;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.footer a {
+    color: #2b2b33;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #018a83;
+}
+
+/*==================================================================================*/
+/*            Start Footer                                                         */
+/*==================================================================================*/
+
+
+
+
+
+
