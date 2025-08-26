@@ -20,28 +20,11 @@ body {
 width: 100vw;
 height: 100vh;
 font-size: 0.88rem;
-background: whitesmoke;
+background-color: white ;
 user-select: none;
 overflow-x: hidden; 
 }
 
-.achieve .number{
-display: flex;
-margin: 1.5rem 0.5rem;
-font-size: 2rem;
-}
-
-
-.achieve .logo-three{
-display:flex;
-  gap:1rem;
-  border-radius: 50%;
-}
-
-.achieve .logo-three img {
-background: rgb(216, 138, 22);
-  border-radius: 50%;
-}
 
 .container {
 display: flex;
@@ -51,8 +34,7 @@ flex-direction: column;
 header{
 display: flex;
 flex-direction: column;
-margin-top: 6%;
-margin-left: 10%;
+
 }
 
 header h2{
@@ -75,81 +57,13 @@ display: flex;
 flex-direction: column;
 } 
 
- .headProg{
-font-size: 1.5rem;
-padding: 1.3rem;
-font-weight: 700;
-margin-top: 3rem;
-margin-bottom: 2rem;
-}
-
-.courses {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 أعمدة */
-  grid-template-rows: repeat(2, auto);   /* 2 صفوف */
-  gap: 2rem;
-  max-height: calc(2 * 200px + 2rem); 
-  /* overflow: hidden; */
-  
-}
-
-.course{
-font-size: 1rem;
-font-weight: 700;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
- padding: 1rem 1rem;
- gap: 2;
-}
-
-.achieve{
-font-size: 1rem;
-font-weight: 700;
-  width: 80%;
- padding: 1rem 1rem;
- gap: 2;
-}
-
-main .achieves .achieve button{
+.btn-coloro{
   background-color: #008C8C; 
   color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 0.3rem;
-
 }
-main .courses .course button {
-  background-color: #008C8C; 
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 1rem;
-  /* text-align: center;
-  justify-content: center;
-  align-items: center; */
+.btn-coloro2{
+   color: rgb(54, 52, 52);
 }
-.progress2 {
-  background-color: #e0e0e0;
-  border-radius: 10px;
-  height: 6px; 
-  width: 90%; 
-  overflow: hidden;
-  margin-top: 1rem;
-}
-
-.headCent {
-  padding: 1.9rem;
-  font-weight: 700;
-  font-size:1.5rem;
-} 
 
 .progress-bar {
   background-color: #008C8C;
@@ -164,136 +78,58 @@ button:hover {
   color: white;
 }
 
-.logo-two {
-  display: flex;
-  align-items: center; 
-  gap: 1rem;
-}
-
-.logo-two i,
-.logo-two img {
-  background: #008C8C;
+.back-img i {
   border-radius: 50%;
-  width:30px;   
-  height: 30px;  
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width:20px;   
+  height: 20px;  
   color: white; 
   font-size: 1rem; 
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+.back-img img{
+  border-radius: 50%;
+  width:15px;   
+  height: 15px;  
+  color: white; 
+  font-size: 1rem; 
+  position: absolute;
+  left: 25%;
+  top: 22%;
 }
 
-.achieves{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 2rem;
-  max-height: calc(2 * 200px + 2rem); 
-  /* overflow: hidden;  */
-  margin-top: 1%;
-}
-.contAch{
-margin-top: 5%;
-font-size: 1.5rem;
-padding: 1.5rem;
-font-weight: 700;
-display: flex;
-flex-direction: column;
+.achieveBack{
+  background-color:#e58611;
+  border-radius: 50%;
+    width:30px;   
+  height: 30px;  
+  position: relative;
 }
 
-.headCenter{
-margin-top: 5%;
-margin-bottom: 1rem;
-
-}
-.savedCenters{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: repeat(2, auto);  
-  gap: 2rem;
-  max-height: calc(2 * 200px + 2rem); 
-  /* overflow: hidden;  */
-
-}
-.center{
-font-size: 1rem;
-font-weight: 400;
-  width: 80%;
- padding: 1rem 1rem;
- gap: 2;
-}
-
- .savedCenters .center button{
-    width: 90%;
-    height: 30%;
-    color: rgb(85, 83, 83);
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  border-color: #4a4545;
-  margin-top: 0.5rem;
-}
-.center p{
-    padding: 0.3rem 0.3rem;
-    margin-bottom: 0.3rem;
-}
-
-.center .map{
-display: flex;
-gap: 0.5rem;
+.achieveBack img {
+  border-radius: 50%;
+    width:15px;   
+  height: 15px; 
+    position: absolute;
+  left: 25%;
+  top: 22%;
+  color: #fff;
 }
 
 
-/* MOBILE */
-@media only screen and (max-width:767px) {
-   body{
-    box-sizing: border-box;
-     /* overflow: hidden;  */
-  }
+.back-img {
+  width: 30px;
+  height: 30px;
+  background-color: #008C8C; 
+  border-radius: 50%;
+position: relative;
+} 
 
 header{
   width: 100%;
 }
 
-.courses{
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 60rem;
-}
-
- .achieves{
-    display: flex;
-  flex-direction: column;
-  padding-bottom: 60rem;
-}
-
-.headCent {
-  padding-top: 10rem;
-  font-weight: 700;
-  font-size:1.5rem;
-}
-.savedCenters{
-    display: flex;
-  flex-direction: column;
-}
-
-.savedCenters .center button {
-      width: 90%;
-    height: 30%;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  border-color: #4a4545;
-  margin-top: 0.5rem;
-}
-.contAch #headAch{
-padding-top:80rem;
-}
-.savedCenters{
-  padding-bottom: 40rem;
-}
-} 
 
 
 /* NAV - FOOTER */

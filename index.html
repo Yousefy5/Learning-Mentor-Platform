@@ -9,9 +9,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
- <div class="container">
-<div class="bootstrap-area">
+<body class="bg-light">
+    <div class="container-fluid p-0">
+
  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
 
             <div class="container-fluid">
@@ -67,199 +67,272 @@
 </div>
 
 
-<header>
-<h2>Welcome Back,Learner!</h2>
+<header class="container text-start pt-5">
+<h2 class="fw-bold">Welcome Back,Learner!</h2>
 <p class="text-muted">Here's an overview of your progress and saved items at MentorEd</p>
 </header>
 
-<main>
-<div class="progressBig">
-<p class="headProg">Your Learning Progress</p>
+<main class="container my-5">
 
-<div class="courses">
-<div class="course">
-<div class="logo-two">
-   <i class="bi bi-code"></i>
-    <p>Web Development Fundamentals</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 75%;"></div>
-</div>
-<p class="text-muted">75% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
+    <!-- Courses Section -->
+    <div class="mb-5">
+      <p class="h4 mb-4 fw-bold">Your Learning Progress</p>
+      <div class="row g-4">
 
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <i class="bi bi-code me-2"></i>
+                </div>
+              <p class="mb-0">Web Development Fundamentals</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <p class="text-muted small mb-2">75% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
 
-<div class="course">
-<div class="logo-two">
-   <img src="./icons/paint-palette.png" width:100px"; height="5x";>
-    <p>Graphic Design Masterclass</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 40%;"></div>
-</div>
-<p class="text-muted">40% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
-
-
-
-<div class="course">
-<div class="logo-two">
-   <img src="./icons/bulb (1).png">
-    <p>Productivity Tools for Success</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 90%;"></div>
-</div>
-<p class="text-muted">90% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
+    
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <img src="./icons/paint-palette.png" class="me-2">
+                </div>
+              <p class="mb-0">Graphic Design Masterclass</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 40%;"></div>
+            </div>
+            <p class="text-muted small mb-2">40% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
 
 
-<div class="course">
-<div class="logo-two">
-    <i class="bi bi-code"></i>
-    <p>Data Science With Python</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 25%;"></div>
-</div>
-<p class="text-muted">25% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <img src="./icons/bulb (1).png" width="24" class="me-2">
+                </div>
+              <p class="mb-0">Productivity Tools for Success</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <p class="text-muted small mb-2">90% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
 
 
-<div class="course">
-<div class="logo-two">
-    <img src="./icons/paint-palette.png">
-    <p>Mobile App UI/UX Design</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 60%;"></div>
-</div>
-<p class="text-muted">60% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+                  <i class="bi bi-code me-2"></i>
+                </div>
+              <p class="mb-0">Data Science with Python</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 25%;"></div>
+            </div>
+            <p class="text-muted small mb-2">25% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+      </div>
 
 
-<div class="course">
-<div class="logo-two">
-    <img src="./icons/bulb (1).png">
-    <p>Project Management Essentials</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 85%;"></div>
-</div>
-<p class="text-muted">85% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
+ <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded  h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <img src="./icons/paint-palette.png" width="24" class="me-2">
+            </div>
+              <p class="mb-0">Mocile App UI/UX Design</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+            <p class="text-muted small mb-2">60% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
 
 
-<div class="course">
-<div class="logo-two">
-    <i class="bi bi-code"></i>
-    <p>Introduction to AI</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 15%;"></div>
-</div>
-<p class="text-muted">15% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+                  <i class="bi bi-code me-2 logo-two"></i>
+                  </div>
+              <p class="mb-0">Project Management Essentials</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <p class="text-muted small mb-2">85% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
 
 
-<div class="course">
-<div class="logo-two">
-   <img src="./icons/bulb (1).png">
-    <p>Digital Marketing Strategy</p>
-</div>
-<div class="progress2">
-  <div class="progress-bar" style="width: 55%;"></div>
-</div>
-<p class="text-muted">55% Completed</p>
-<button onclick="ContinueLearning">Continue Learning</button>
-</div>
-</div>
-</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                                <div class="back-img me-2">
+      <i class="bi bi-code me-2 logo-two"></i>
+                </div>
+              <p class="mb-0">Introduction to AI</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 15%;"></div>
+            </div>
+            <p class="text-muted small mb-2">15% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
 
 
-    <div class="contAch">
-        <p id="headAch">Your Achievements</p></div>
-<div class="achieves">
-<div class="achieve">
-<div class="logo-three">
-    <img src="./icons/ranking (1).png">
-    <p>Quizzes Completed</p>
-</div>
-<h3 class="number">12</h3>
-<p class="text-muted">Keep up the great work!</p>
-<button onclick="TakeMoreQuiz">Take More Quizzes</button>
-</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  h-100">
+            <div class="d-flex align-items-center mb-2">
+                              <div class="back-img me-2">
+              <img src="./icons/bulb (1).png" width="24" class="me-2">
+                </div>
+              <p class="mb-0">Digital Marketing Strategy</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 55%;"></div>
+            </div>
+            <p class="text-muted small mb-2">55% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+ </div>
 
-
-<div class="achieve">
-<div class="logo-three">
-    <img src="./icons/check.png">
-    <p>Lessons Mastered</p>
-</div>
-<h3 class="number">214</h3>
-<p class="text-muted">Ready for the next challenge </p>
-<button onclick="TakeMoreQuiz">Explore New Tracks</button>
-</div>
-
-
-<div class="achieve">
-<div class="logo-three">
-    <img src="./icons/home (1).png">
-    <p>Learning Streak</p>
-</div>
-<h3 class="number">18 Days</h3>
-<p class="text-muted">consistency is the key to mastery</p>
-</div>
-
-
-<div class="achieve">
-<div class="logo-three">
-    <img src="./icons/light-bulb.png">
-    <p>Learning Hours</p>
-</div>
-<h3 class="number">85h 30m</h3>
-<p class="text-muted">invested in your future</p>
-</div>
-
-</div>
-
-<p class="headCent">Your Saved Learning Center</p>
-<div class="savedCenters">
-<div class="center">
-    <div class="map">
-<img src="./icons/maps-and-flags (1).png">
-<p><b>Cairo Tech Hub</b></p>
+      </div>
     </div>
-<p class="text-muted">Cairo,Egypt</p>
-<button onclick="ViewDetails"> View Details</button>
-</div>
+    <!-- End Courses Section -->
 
-<div class="center">
-    <div class="map">
-<img src="./icons/maps-and-flags (1).png">
-<p><b>Alexandria Innovation Lab</b></p>
-    </div>
-<p class="text-muted">Alexandria,Egypt</p>
-<button onclick="ViewDetails"> View Details</button>
-</div>
+    <!-- Achievements -->
+    <div class="mb-5">
+      <p class="h4 mb-4 fw-bold">Your Achievements</p>
+      <div class="row g-4">
 
-<div class="center">
-    <div class="map">
-<img src="./icons/maps-and-flags (1).png">
-<p><b>Giza Learning Center</b></p>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+            <div class="achieveBack me-3 ">
+            <img src="./icons/ranking (1).png" width="32" class="mb-2">
+            </div>
+            <p class="mb-1">Quizzes Completed</p>
+                </div>
+            <h3 class="fw-bold mt-3">12</h3>
+            <p class="text-muted small">Keep up the great work!</p>
+            <button class="btn btn-coloro2 py-2 px-5 border btn-sm">Take More Quizzes</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+                 <div class="achieveBack me-2">
+            <img src="./icons/check.png" width="32" class="mb-2">
+            </div>
+            <p class="mb-1">Lessons Mastered</p>
+                </div>
+            <h3 class="fw-bold mt-3">214</h3>
+            <p class="text-muted small">Ready for the next challenge?</p>
+            <button class="btn btn-coloro2 py-2 px-5 border btn-sm ">Explore New Tracks</button>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+                     <div class="achieveBack me-2">
+            <img src="./icons/home (1).png" width="32" class="mb-2">
+            </div>
+            <p class="mb-1 ">Leaning Streak</p>
+                </div>
+            <h3 class="fw-bold mt-3">12</h3>
+            <p class="text-muted small">Consistency is key to mastery</p>
+        </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+                <div class="achieveBack me-2">
+            <img src="./icons/bulb (1).png" width="32" class="mb-2">
+            </div>
+            <p class="mb-1">Learning Hours</p>
+                </div>
+            <h3 class="fw-bold mt-3">12</h3>
+            <p class="text-muted small">Invested in your future</p>
+          </div>
+        </div>
+
+
     </div>
-<p class="text-muted">Giza,Egypt</p>
-<button onclick="ViewDetails"> View Details</button>
-</div>
-</div>
-</main>
+    </div>
+
+
+    <!-- End Achievements -->
+
+    <!-- Saved Centers -->
+    <div class="mb-5">
+      <p class="h4 mb-4 fw-bold">Your Saved Learning Center</p>
+      <div class="row g-0 d-flex justify-content-evenly ">
+        <div class="col-12 col-md-3">
+              <div class="p-3  rounded  text-start h-100">
+          <div class="d-flex align-items-center mb-2 ">
+            <img src="./icons/maps-and-flags (1).png" width="23"  class="me-2" alt="location">
+            <p class="fw-bold mb-0 h6">Cairo Tech Hub</p>
+          </div>
+            <p class="text-muted small mb-3">Cairo, Egypt</p>
+            <button class="btn btn-coloro2 border btn-sm w-100">View Details</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+              <div class="p-3  rounded  text-start h-100">
+          <div class="d-flex align-items-center mb-2 ">
+            <img src="./icons/maps-and-flags (1).png" width="23"  class="me-2" alt="location">
+            <p class="fw-bold mb-0 h6">Alexandria Innovation Lab</p>
+          </div>
+
+            <p class="text-muted small mb-3">Alexandria, Egypt</p>
+            <button class="btn btn-coloro2 border btn-sm w-100">View Details</button>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-3">
+              <div class="p-3  rounded  text-start h-100">
+          <div class="d-flex align-items-center mb-2 ">
+            <img src="./icons/maps-and-flags (1).png" width="23"  class="me-2" alt="location">
+            <p class="fw-bold mb-0 h6">Giza Learning Center</p>
+          </div>
+
+            <p class="text-muted small mb-3">Giza, Egypt</p>
+            <button class="btn btn-coloro2 border btn-sm w-100">View Details</button>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- End Saved Centers -->
+    </div>
+  </main>
+
+
 
 
 <div class="bootstrap-area">
@@ -286,7 +359,7 @@
 </div>
 
 
-
+ </div>
 
  </div>
 </body>
