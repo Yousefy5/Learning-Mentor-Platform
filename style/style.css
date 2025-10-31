@@ -64,6 +64,10 @@ flex-direction: column;
 .btn-coloro2{
    color: rgb(54, 52, 52);
 }
+.coloro{
+    background-color: #008C8C; 
+  color: white;
+}
 
 .progress-bar {
   background-color: #008C8C;
