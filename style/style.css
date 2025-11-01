@@ -109,15 +109,16 @@ button:hover {
     width:30px;   
   height: 30px;  
   position: relative;
+  color: white;
 }
 
-.achieveBack img {
+.achieveBack i {
   border-radius: 50%;
     width:15px;   
   height: 15px; 
     position: absolute;
-  left: 25%;
-  top: 22%;
+  left: 22%;
+  top: 17%;
   color: #fff;
 }
 
