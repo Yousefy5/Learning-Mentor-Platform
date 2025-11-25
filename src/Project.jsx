@@ -12,6 +12,7 @@ import OfflineCenters from "./pages/OfflineCenters";
 import QuizHub from "./pages/QuizHub";
 import PlacementQuiz from "./pages/PlacementQuiz";
 import PracticeQuiz from "./pages/PracticeQuiz";
+import ProductivityToolsMastery from "./components/LearningTracksPage/ProductivityToolsMastery";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -30,6 +31,7 @@ const routes = createBrowserRouter([
       { path: '/learning-tracks', element: <LearningTracks /> },
       { path: '/learning-tracks/graphic-design-essentials', element: <GraphicDesignEssentials /> },
       { path: '/learning-tracks/programming-fundamentals', element: <ProgrammingFundamentals /> },
+      { path: '/learning-tracks/productivity-tools',element: <ProductivityToolsMastery/> },
       { path: '/learning-tracks/programming-fundamentals/python-fundamentals', element: <PythonFundamentalsRoadmap /> },
       { path: '/learning-tracks/programming-fundamentals/web-development', element: <WebDevelopmentFundamentalsRoadmap /> },
       { path: '/offline-centers', element: <OfflineCenters /> },
