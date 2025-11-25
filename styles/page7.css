@@ -1,0 +1,359 @@
+
+/*==================================================================================*/
+/*            Start Navbar                                                         */
+/*==================================================================================*/
+
+.navbar {
+    background-color: #fff;
+    height: 56px;
+    padding: 0.5rem;
+}
+.logo-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #018a83;
+
+}
+
+.navbar-brand{/*Logo Customization, Yet to ADD*/}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler-icon {
+    filter: invert(40%) sepia(80%) saturate(400%) hue-rotate(130deg);
+}
+
+.nav-link {
+    color: #2b2b33;
+    font-weight: 500;
+    font-size: 0.8rem;
+
+    position: relative;
+}
+
+
+.logo-text:hover,
+.logo-text.active
+{
+    color: #2b2b33;
+}
+.nav-link:hover,
+.nav-link.active
+{
+    color: #000;
+    font-weight: 520;
+}
+
+#MyAccBtn {
+    background-color: #fff;
+    color: #2b2b33;
+    border: 1px solid #2b2b33;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+#MyAccBtn:hover {
+    color: #fff;
+    background-color: #018a83;
+    border: none;
+}
+#MyAccBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(1, 138, 131, 0.5);
+}
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #018a83;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fff;
+        padding: 1rem;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 18%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #018a83;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 35%;
+        visibility: visible;
+    }
+    #MyAccountBtn {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active {
+    background-color: #018a83;
+    color: #fff;
+}
+
+
+/*==================================================================================*/
+/*            End Navbar                                                            */
+/*==================================================================================*/
+
+
+
+*{
+margin: 0;
+padding: 0;
+outline: 0;
+appearance: none;
+border: 0;
+text-decoration: none;
+list-style: none;
+scroll-behavior: smooth;
+box-sizing: border-box;
+}
+
+
+body {
+background-color: white ;
+user-select: none;
+overflow-x: hidden; 
+}
+
+
+.container {
+display: flex;
+flex-direction: column;
+}
+
+header{
+display: flex;
+flex-direction: column;
+
+}
+
+header h2{
+font-size: 1.5rem;
+padding: 1.3rem;
+}
+
+.text-muted{
+color: rgb(106, 99, 99);
+font-weight: 100;
+display: flex;
+margin-top: 1rem;
+margin-bottom: 2rem;
+
+}
+
+ main {
+margin-left: 10%;
+display: flex;
+flex-direction: column;
+} 
+
+.btn-coloro{
+  background-color: #008C8C; 
+  color: white;
+}
+.btn-coloro2{
+   color: rgb(54, 52, 52);
+}
+.coloro{
+    background-color: #008C8C; 
+  color: white;
+}
+
+.progress-bar {
+  background-color: #008C8C;
+  height: 100%;
+  width: 25%; 
+  border-radius: 10px;
+  transition: width 0.5s ease; 
+}
+
+button:hover {
+  background-color: #03342c; 
+  color: white;
+}
+
+.back-img i {
+  border-radius: 50%;
+  width:20px;   
+  height: 20px;  
+  color: white; 
+  font-size: 1rem; 
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+.back-img img{
+  border-radius: 50%;
+  width:15px;   
+  height: 15px;  
+  color: white; 
+  font-size: 1rem; 
+  position: absolute;
+  left: 25%;
+  top: 22%;
+}
+
+.achieveBack{
+  background-color:#e58611;
+  border-radius: 50%;
+    width:30px;   
+  height: 30px;  
+  position: relative;
+  color: white;
+}
+
+.achieveBack i {
+  border-radius: 50%;
+    width:15px;   
+  height: 15px; 
+    position: absolute;
+  left: 20%;
+  top: 10%;
+  color: #fff;
+}
+
+
+.back-img {
+  width: 30px;
+  height: 30px;
+  background-color: #008C8C; 
+  border-radius: 50%;
+position: relative;
+} 
+
+header{
+  width: 100%;
+}
+
+
+
+/* NAV - FOOTER */
+
+.navbar {
+    background-color: #fff;
+    height: 56px;
+    padding: 0.5rem;
+}
+.logo-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #018a83;
+
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler-icon {
+    filter: invert(40%) sepia(80%) saturate(400%) hue-rotate(130deg);
+}
+
+.nav-link {
+    color: #2b2b33;
+    font-weight: 500;
+    font-size: 0.8rem;
+
+    position: relative;
+}
+
+
+.logo-text:hover,
+.logo-text.active
+{
+    color: #2b2b33;
+}
+.nav-link:hover,
+.nav-link.active
+{
+    color: #000;
+    font-weight: 520;
+}
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #018a83;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+
+/*==================================================================================*/
+/*            Start Footer                                                         */
+/*==================================================================================*/
+
+.footer {
+    background-color: #fff;
+    font-size: 0.85rem;
+    color: #2b2b33;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.footer a {
+    color: #2b2b33;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #018a83;
+}
+
+/*==================================================================================*/
+/*            End Footer                                                         */
+/*==================================================================================*/
+
