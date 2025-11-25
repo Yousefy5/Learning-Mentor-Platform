@@ -1,0 +1,64 @@
+/* QuizHub.css */
+.roadmap-page h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    color: #2b2b33;
+}
+
+.learning-card {
+    border: 1px solid #eee;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.learning-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.learning-card i {
+    font-size: 2.2rem;
+    color: #018a83;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.learning-card h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #2b2b33;
+}
+
+.learning-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.learning-card .btn {
+    background-color: #018a83;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+    color: white;
+}
+
+.learning-card .btn:hover {
+    background-color: #026d67;
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 767px) {
+    .learning-card {
+        margin-bottom: 1rem;
+    }
+}

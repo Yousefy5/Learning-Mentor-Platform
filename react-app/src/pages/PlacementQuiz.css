@@ -1,0 +1,60 @@
+/* PlacementQuiz.css */
+.quiz-card {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+    border: none;
+    border-radius: 1rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-height: 700px) {
+    .quiz-card {
+        min-height: auto;
+    }
+}
+
+.progress {
+    height: 6px;
+}
+
+.question-block {
+    flex: 1;
+}
+
+.progress-bar {
+    background-color: #018a83 !important;
+}
+
+.btn-primary {
+    background-color: #018a83;
+    border-color: #018a83;
+}
+
+.btn-primary:hover {
+    background-color: #026d67;
+    border-color: #026d67;
+}
+
+.quiz-buttons {
+    min-width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    min-height: calc(100vh - 56px - 72px);
+    /* Adjust based on navbar/footer height */
+    padding: 2rem 0;
+}
