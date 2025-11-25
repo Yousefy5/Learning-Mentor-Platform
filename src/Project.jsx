@@ -8,6 +8,7 @@ import WebDevelopmentFundamentalsRoadmap from "./components/LearningTracksPage/W
 import ProgrammingFundamentals from "./components/LearningTracksPage/ProgrammingFundamentals";
 import GraphicDesignEssentials from "./components/LearningTracksPage/GraphicDesignEssentials";
 import Home from "./pages/Home";
+import OfflineCenters from "./pages/OfflineCenters";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -28,9 +29,7 @@ const routes = createBrowserRouter([
     { path: '/learning-tracks/programming-fundamentals', element: <ProgrammingFundamentals /> },
     { path: '/learning-tracks/programming-fundamentals/python-fundamentals', element: <PythonFundamentalsRoadmap /> },
     { path: '/learning-tracks/programming-fundamentals/web-development', element: <WebDevelopmentFundamentalsRoadmap /> },
-    
-
-
+    { path: '/offline-centers', element: <OfflineCenters/> }
   ]},
 
 

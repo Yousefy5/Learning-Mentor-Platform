@@ -38,7 +38,7 @@ function Navbar(){
         </li>
 
         <li className="nav-item">
-          <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/offline-centres">Offline Centres</NavLink>
+          <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/offline-centers">Offline Centers</NavLink>
         </li>
         <li className="nav-item">
           <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/dashboard">Dashboard</NavLink>
