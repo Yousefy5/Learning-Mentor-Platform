@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+}
+
+.btn-primary {
+    background-color: #018a83 !important;
+    border-color: #018a83 !important;
+}
+
+.btn-primary:hover {
+    background-color: #016d66 !important;
+    border-color: #016d66 !important;
+}
+
+a {
+    color: #018a83;
+}
+
+a:hover {
+    color: #016d66;
+}

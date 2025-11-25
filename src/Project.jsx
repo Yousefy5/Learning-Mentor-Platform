@@ -9,6 +9,9 @@ import ProgrammingFundamentals from "./components/LearningTracksPage/Programming
 import GraphicDesignEssentials from "./components/LearningTracksPage/GraphicDesignEssentials";
 import Home from "./pages/Home";
 import OfflineCenters from "./pages/OfflineCenters";
+import QuizHub from "./pages/QuizHub";
+import PlacementQuiz from "./pages/PlacementQuiz";
+import PracticeQuiz from "./pages/PracticeQuiz";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -21,19 +24,21 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   </Route>
 // );
 const routes = createBrowserRouter([
-
-  { path: '/', element: <Home />, children:[
-    { path: '/', element: <LandingPage /> },
-    { path: '/learning-tracks', element: <LearningTracks /> },
-    { path: '/learning-tracks/graphic-design-essentials', element: <GraphicDesignEssentials /> },
-    { path: '/learning-tracks/programming-fundamentals', element: <ProgrammingFundamentals /> },
-    { path: '/learning-tracks/programming-fundamentals/python-fundamentals', element: <PythonFundamentalsRoadmap /> },
-    { path: '/learning-tracks/programming-fundamentals/web-development', element: <WebDevelopmentFundamentalsRoadmap /> },
-    { path: '/offline-centers', element: <OfflineCenters/> }
-  ]},
-
-
-])
+  {
+    path: '/', element: <Home />, children: [
+      { path: '/', element: <LandingPage /> },
+      { path: '/learning-tracks', element: <LearningTracks /> },
+      { path: '/learning-tracks/graphic-design-essentials', element: <GraphicDesignEssentials /> },
+      { path: '/learning-tracks/programming-fundamentals', element: <ProgrammingFundamentals /> },
+      { path: '/learning-tracks/programming-fundamentals/python-fundamentals', element: <PythonFundamentalsRoadmap /> },
+      { path: '/learning-tracks/programming-fundamentals/web-development', element: <WebDevelopmentFundamentalsRoadmap /> },
+      { path: '/offline-centers', element: <OfflineCenters /> },
+      { path: '/quizzes', element: <QuizHub /> },
+      { path: '/placement-quiz', element: <PlacementQuiz /> },
+      { path: '/practice-quiz', element: <PracticeQuiz /> }
+    ]
+  }
+]);
 
 root.render(
   <RouterProvider router={routes} />

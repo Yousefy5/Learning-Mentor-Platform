@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome for icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7Y7qZC2P9JQXQY+IU3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/page7.css">
+</head>
+<body>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <span class="logo-text">MentorED</span>
+      </a>
+
+      <!-- Mobile button -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <!-- Learning Tracks -->
+          <li class="nav-item">
+            <a class="nav-link" href="page2.html">Learning Tracks</a>
+          </li>
+
+          <!-- Quizzes Dropdown -->
+          <li class="nav-item">
+            <a class="nav-link" href="page%204%205.html">Quizzes</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="page6.html">Offline Centres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="page7.html">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- My Account Button -->
+        <div class="d-flex ms-lg-3 mt-lg-0" id="MyAccountBtn">
+          <button class="btn btn-primary btn-sm" type="button" id="MyAccBtn">My Account</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+<header class="container text-start pt-5">
+<h2 class="fw-bold fs-2">Welcome Back,Learner!</h2>
+<p class="text-muted fs-5">Here's an overview of your progress and saved items at MentorEd</p>
+</header>
+
+<main class="container my-5">
+
+    <!-- Courses Section -->
+    <div class="mb-5">
+      <p class="h4 mb-4 fw-bold">Your Learning Progress</p>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <i class="bi bi-code me-2"></i>
+                </div>
+              <p class="mb-0 fs-6">Web Development</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <p class="text-muted small mb-2">75% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+
+    
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <i class="bi bi-easel"></i>
+                </div>
+              <p class="mb-0 fs-6">Graphic Design Masterclass</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 40%;"></div>
+            </div>
+            <p class="text-muted small mb-2">40% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <i class="bi bi-lightbulb"></i>
+                </div>
+              <p class="mb-0 fs-6">Productivity Tools for Success</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <p class="text-muted small mb-2">90% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+                  <i class="bi bi-code me-2"></i>
+                </div>
+              <p class="mb-0 fs-6">Data Science with Python</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 25%;"></div>
+            </div>
+            <p class="text-muted small mb-2">25% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+      </div>
+
+
+ <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded  h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+              <i class="bi bi-easel"></i>
+            </div>
+              <p class="mb-0 fs-6">Mobile App UI/UX Design</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+            <p class="text-muted small mb-2">60% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  h-100">
+            <div class="d-flex align-items-center mb-2">
+                <div class="back-img me-2">
+                    <i class="bi bi-lightbulb"></i>
+                  </div>
+              <p class="mb-0 fs-6">Project Management Essentials</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <p class="text-muted small mb-2">85% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded h-100">
+            <div class="d-flex align-items-center mb-2">
+                                <div class="back-img me-2">
+      <i class="bi bi-code me-2 logo-two"></i>
+                </div>
+              <p class="mb-0 fs-6">Introduction to AI</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 15%;"></div>
+            </div>
+            <p class="text-muted small mb-2">15% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  h-100">
+            <div class="d-flex align-items-center mb-2">
+                              <div class="back-img me-2">
+  <i class="bi bi-lightbulb"></i>
+                </div>
+              <p class="mb-0 fs-6">Digital Marketing Strategy</p>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 55%;"></div>
+            </div>
+            <p class="text-muted small mb-2">55% Completed</p>
+            <button class="btn btn-coloro btn-sm w-100">Continue Learning</button>
+          </div>
+        </div>
+ </div>
+
+      </div>
+    </div>
+    <!-- End Courses Section -->
+
+    <!-- Achievements -->
+    <div class="mb-5">
+      <p class="h4 mb-4 fw-bold">Your Achievements</p>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 rounded text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+            <div class="achieveBack me-3 ">
+            <i class="bi bi-award fs-5"></i>
+            </div>
+            <p class="mb-1 fs-6">Quizzes Completed</p>
+                </div>
+            <h3 class="fw-bold mt-3">12</h3>
+            <p class="text-muted medium">Keep up the great work!</p>
+            <button class="btn btn-coloro2 py-2 px-5 border btn-sm">Take More Quizzes</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+                 <div class="achieveBack me-2">
+                  <i class="bi bi-check2 fs-5"></i>
+
+            </div>
+            <p class="mb-1 fs-6">Lessons Mastered</p>
+                </div>
+            <h3 class="fw-bold mt-3">214</h3>
+            <p class="text-muted medium">Ready for the next challenge?</p>
+            <button class="btn btn-coloro2 py-2 px-5 border btn-sm ">Explore New Tracks</button>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+                     <div class="achieveBack me-2">
+           <i class="bi bi-house-door fs-5"></i>
+            </div>
+            <p class="mb-1 fs-6">Leaning Streak</p>
+                </div>
+            <h3 class="fw-bold mt-3">12</h3>
+            <p class="text-muted medium">Consistency is key to mastery</p>
+        </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3  rounded  text-start h-100">
+                <div class="d-flex align-items-center mb-2">
+                <div class="achieveBack me-2">
+            <i class="bi bi-lightbulb fs-5"></i>
+            </div>
+            <p class="mb-1 fs-6">Learning Hours</p>
+                </div>
+            <h3 class="fw-bold mt-3">12</h3>
+            <p class="text-muted medium">Invested in your future</p>
+          </div>
+        </div>
+
+
+    </div>
+    </div>
+    <!-- End Achievements -->
+
+    
+    <!-- Saved Centers -->
+    <div class="mb-5">
+      <p class="h4 mb-4 fw-bold">Your Saved Learning Center</p>
+      <div class="row g-0 d-flex justify-content-evenly ">
+        <div class="col-12 col-md-3">
+              <div class="p-3  rounded  text-start h-100">
+          <div class="d-flex align-items-center mb-2 ">
+          <i class="bi bi-geo-alt mx-2 fs-3"></i>
+            <p class="fw-bold mb-0 h6">Cairo Tech Hub</p>
+          </div>
+            <p class="text-muted medium mb-3">Cairo, Egypt</p>
+            <button class="btn btn-coloro2 border btn-sm w-100">View Details</button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+              <div class="p-3  rounded  text-start h-100">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-geo-alt mx-2 fs-3"></i>
+            <p class="fw-bold mb-0 h6">Alexandria Innovation Lab</p>
+          </div>
+
+            <p class="text-muted medium mb-3">Alexandria, Egypt</p>
+            <button class="btn btn-coloro2 border btn-sm w-100">View Details</button>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-3">
+              <div class="p-3  rounded  text-start h-100">
+                <div class="d-flex align-items-center mb-2 ">
+                  <i class="bi bi-geo-alt mx-2 fs-3"></i>
+                  <p class="fw-bold mb-0 h6">Giza Learning Center</p>
+                </div>
+                <p class="text-muted medium mb-3">Giza, Egypt</p>
+                <button class="btn btn-coloro2 border btn-sm w-100">View Details</button>
+              </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- End Saved Centers -->
+    </div>
+  </main>
+
+
+
+
+<!-- Footer -->
+<footer class="footer mt-auto">
+  <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center py-3 border-top">
+    <div class="d-flex gap-3 mb-2 mb-md-0">
+      <a href="#">About Us</a>
+      <a href="#">Resources</a>
+      <a href="#">Legal</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+
+ </div>
+
+ </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
