@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function ModuleCard({ title, img, type, duration, mIndex, cIndex }) {
+function ModuleCard({ title, img, type, duration, mIndex, cIndex }) {
     return (
         <div className="col-md-4">
             <div className="card h-100 border-0 shadow-sm p-3">
