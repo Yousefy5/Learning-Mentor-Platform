@@ -52,9 +52,7 @@ function LearningTracks() {
                   productivity software, streamlining your workflow and
                   maximizing output.
                 </p>
-                <button className="btn btn-primary" disabled>
-                  Coming Soon!
-                </button>
+                <Link to="/learning-tracks/productivity-tools" className="btn btn-primary">Start Learning</Link>
               </div>
             </div>
           </div>
