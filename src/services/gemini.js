@@ -13,31 +13,29 @@ export const generateQuiz = async (params) => {
     } = params;
 
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const modelsToTry = ["gemini-1.5-flash", "gemini-1.5-flash-001", "gemini-pro", "gemini-1.0-pro"];
+        let model = null;
+        let result = null;
+        let lastError = null;
 
-        // Construct the text prompt
-        const prompt = `
-            You are an expert quiz generator.
-            Create a ${difficulty} difficulty quiz with ${questionCount} questions.
-            Language: ${language}
-            
-            ${customPrompt ? `Custom Instructions: ${customPrompt}` : ''}
-            
-            ${pdfText ? `Based on the following document content:\n\n${pdfText.substring(0, 30000)}` : "Topic: General Knowledge (since no document was provided, infer topic from custom instructions or default to general knowledge)."}
-
-            Return the result strictly as a JSON array of objects.
-            Each object must have this structure:
-            {
-                "question": "The question text",
-                "options": ["Option A", "Option B", "Option C", "Option D"],
-                "correct": 0, // Index of the correct option (0-3)
-                "explanation": "Brief explanation of why the answer is correct"
+        for (const modelName of modelsToTry) {
+            try {
+                console.log(`Attempting to generate with model: ${modelName}`);
+                model = genAI.getGenerativeModel({ model: modelName });
+                result = await model.generateContent(prompt);
+                console.log(`Success with model: ${modelName}`);
+                break; // If successful, exit the loop
+            } catch (error) {
+                console.warn(`Failed with model ${modelName}:`, error);
+                lastError = error;
+                // Continue to next model
             }
+        }
 
-            Do not include any markdown formatting (like \`\`\`json). Just return the raw JSON array.
-        `;
+        if (!result) {
+            throw new Error(`All models failed. Last error: ${lastError?.message || "Unknown error"}`);
+        }
 
-        const result = await model.generateContent(prompt);
         const response = await result.response;
         const text = response.text();
 
