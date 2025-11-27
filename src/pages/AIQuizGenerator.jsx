@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { generateQuiz } from '../services/gemini';
+import { extractTextFromPDF } from '../utils/pdfUtils';
 import '../styles/AIQuizGenerator.css';
 
 const AIQuizGenerator = () => {
@@ -17,6 +18,7 @@ const AIQuizGenerator = () => {
     const [showResults, setShowResults] = useState(false);
     const [score, setScore] = useState(0);
     const [error, setError] = useState('');
+    const [statusMessage, setStatusMessage] = useState('');
 
     const fileInputRef = useRef(null);
 
@@ -55,8 +57,18 @@ const AIQuizGenerator = () => {
         setCurrentQuestion(0);
 
         try {
+            let pdfText = '';
+            if (files.length > 0) {
+                setStatusMessage('Extracting text from documents...');
+                for (const file of files) {
+                    const text = await extractTextFromPDF(file);
+                    pdfText += text + '\n\n';
+                }
+            }
+
+            setStatusMessage('Generating quiz with AI...');
             const data = await generateQuiz({
-                files,
+                pdfText,
                 customPrompt,
                 difficulty,
                 questionCount,
@@ -64,9 +76,11 @@ const AIQuizGenerator = () => {
             });
             setQuizData(data);
         } catch (err) {
-            setError('Failed to generate quiz. Please try again.');
+            console.error(err);
+            setError('Failed to generate quiz. ' + (err.message || 'Please try again.'));
         } finally {
             setIsLoading(false);
+            setStatusMessage('');
         }
     };
 
@@ -215,7 +229,7 @@ const AIQuizGenerator = () => {
                     {isLoading && (
                         <div className="text-center py-5">
                             <div className="spinner-border text-primary mb-3" role="status"></div>
-                            <h5>Analyzing your documents and generating quiz...</h5>
+                            <h5>{statusMessage}</h5>
                             <p className="text-muted">This may take a few moments.</p>
                         </div>
                     )}
