@@ -3,14 +3,54 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-export const generateQuiz = async (topic, difficulty = "Medium", count = 5) => {
+// Helper to convert File to base64
+async function fileToGenerativePart(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            const base64Data = reader.result.split(',')[1];
+            resolve({
+                inlineData: {
+                    data: base64Data,
+                    mimeType: file.type
+                },
+            });
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
+}
+
+export const generateQuiz = async (params) => {
+    const {
+        files = [],
+        customPrompt = "",
+        difficulty = "Medium",
+        questionCount = 5,
+        language = "English"
+    } = params;
+
     try {
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-        const prompt = `
-            You are an expert quiz generator for a learning platform.
-            Create a ${difficulty} difficulty quiz about "${topic}" with ${count} questions.
+        let promptParts = [];
+
+        // Add files if present
+        if (files.length > 0) {
+            const fileParts = await Promise.all(files.map(fileToGenerativePart));
+            promptParts = [...promptParts, ...fileParts];
+        }
+
+        // Construct the text prompt
+        const textPrompt = `
+            You are an expert quiz generator.
+            Create a ${difficulty} difficulty quiz with ${questionCount} questions.
+            Language: ${language}
             
+            ${customPrompt ? `Custom Instructions: ${customPrompt}` : ''}
+            
+            ${files.length > 0 ? "Based on the attached document(s)." : "Topic: General Knowledge (since no document was provided, infer topic from custom instructions or default to general knowledge)."}
+
             Return the result strictly as a JSON array of objects.
             Each object must have this structure:
             {
@@ -23,7 +63,9 @@ export const generateQuiz = async (topic, difficulty = "Medium", count = 5) => {
             Do not include any markdown formatting (like \`\`\`json). Just return the raw JSON array.
         `;
 
-        const result = await model.generateContent(prompt);
+        promptParts.push(textPrompt);
+
+        const result = await model.generateContent(promptParts);
         const response = await result.response;
         const text = response.text();
 

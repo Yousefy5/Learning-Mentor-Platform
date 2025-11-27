@@ -1,46 +1,77 @@
 /* AIQuizGenerator.css */
 .ai-quiz-page {
     padding: 3rem 0;
-    background-color: #f0f2f5;
+    background-color: #f8f9fa;
     min-height: 100vh;
 }
 
 .ai-quiz-container {
     background: white;
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     max-width: 800px;
     margin: 0 auto;
 }
 
-.page-title {
-    color: #2b2b33;
-    font-weight: 700;
+/* Upload Area */
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #fff;
 }
 
-.generator-form label {
-    font-weight: 600;
-    color: #495057;
-    margin-bottom: 0.5rem;
+.upload-area:hover {
+    border-color: #018a83;
+    background-color: #f8fffe;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: #6c757d;
+}
+
+/* Form Elements */
+.form-label {
+    color: #2b2b33;
+    font-size: 0.95rem;
+}
+
+.form-control,
+.form-select {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #018a83;
+    box-shadow: 0 0 0 0.25rem rgba(1, 138, 131, 0.1);
 }
 
 .generate-btn {
-    background-color: #018a83;
+    background-color: #78c2ad;
+    /* Matching the teal color in the image */
     border: none;
     font-weight: 600;
     margin-top: 1rem;
     transition: all 0.3s;
+    color: white;
 }
 
 .generate-btn:hover {
-    background-color: #016f69;
+    background-color: #65a895;
     transform: translateY(-2px);
 }
 
 /* Quiz Interface */
 .question-card {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .options-list {
@@ -57,6 +88,7 @@
     transition: all 0.2s;
     display: flex;
     align-items: center;
+    background-color: white;
 }
 
 .option-item:hover {
