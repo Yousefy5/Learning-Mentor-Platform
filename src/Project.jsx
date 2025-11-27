@@ -24,6 +24,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   </Route>
 // );
 import QuestionBank from "./pages/QuestionBank";
+import AIQuizGenerator from "./pages/AIQuizGenerator";
 
 const routes = createBrowserRouter([
   {
@@ -38,7 +39,8 @@ const routes = createBrowserRouter([
       { path: '/quizzes', element: <QuizHub /> },
       { path: '/placement-quiz', element: <PlacementQuiz /> },
       { path: '/practice-quiz', element: <PracticeQuiz /> },
-      { path: '/question-bank', element: <QuestionBank /> }
+      { path: '/question-bank', element: <QuestionBank /> },
+      { path: '/ai-quiz-generator', element: <AIQuizGenerator /> }
     ]
   }
 ]);
