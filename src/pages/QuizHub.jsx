@@ -41,7 +41,7 @@ const QuizHub = () => {
                             <i className="bi bi-journal-text fs-1" style={{ color: '#018a83' }}></i>
                             <h5>Question Bank</h5>
                             <p>Browse questions by category and difficulty. Build your confidence step by step.</p>
-                            <button className="btn btn-primary" disabled>Coming Soon!</button>
+                            <Link to="/question-bank" className="btn btn-primary">Go to Question Bank</Link>
                         </div>
                     </div>
                 </div>
