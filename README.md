@@ -1,56 +1,16 @@
-# 🧑‍🏫 Mentor Style Guidance Platform
+# React + Vite
 
-A **bilingual Arabic-English web platform** that guides Egyptian and Arab learners through **curated step-by-step roadmaps** for Programming, Graphic Design, and Productivity Tools — with quizzes, progress tracking, and offline learning center listings.  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## ✨ Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- 📚 **Curated Learning Paths** – Step-by-step short & long tracks for each skill.
-- 📝 **Placement Quizzes** – Find your starting level and skip known topics.
-- 🎯 **Practice Quizzes** – Test knowledge with multiple question formats.
-- 🗺 **Offline Learning Centers** – Find trusted training centers across Egyptian cities.
-- 📊 **Progress Tracking** – Mark lessons complete and track completion percentage.
-- 🌍 **Bilingual Interface** – Full Arabic (RTL) and English support.
-- 💬 **User Feedback** – Rate and suggest better learning resources.
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠 Tech Stack (Planned)
+## Expanding the ESLint configuration
 
-- **Frontend:** React  
-- **Styling:** CSS, Bootstrap, Tailwind CSS  
-- **Database:** MongoDB  
-- **Backend:** TBD  
-- **Maps API:** TBD (possibly Google Maps API)  
-- **Localization:** TBD (Arabic + English support)  
-- **Hosting:** TBD  
-
----
-
-## 🧑‍💻 Target Users
-
-- Beginners exploring new career skills
-- Parents guiding their children’s learning
-- Career switchers in Egypt/MENA
-- Learners who prefer both online and offline learning options
-
----
-
-## 📄 Project Analysis
-You can read the full document [here](./project-analysis.md).
-
-## 🚀 Getting Started
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/mentor-style-guidance.git
-
-# Navigate to project folder
-cd mentor-style-guidance
-
-# Install dependencies
-npm install
-
-# Run development server
-npm start
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

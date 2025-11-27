@@ -12,17 +12,18 @@ box-sizing: border-box;
 }
 
 html {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
 width: 100vw;
 height: 100vh;
-font-size: 0.88rem;
+font-size: 0.90rem;
 background-color: white ;
 user-select: none;
 overflow-x: hidden; 
+font-weight: 600;
 }
 
 
@@ -38,8 +39,8 @@ flex-direction: column;
 }
 
 header h2{
-font-size: 1.5rem;
-padding: 1.3rem;
+
+padding-top: 1rem;
 }
 
 .text-muted{
@@ -78,7 +79,7 @@ flex-direction: column;
 }
 
 button:hover {
-  background-color: #03342c; 
+  background-color: #042a23; 
   color: white;
 }
 
@@ -89,18 +90,8 @@ button:hover {
   color: white; 
   font-size: 1rem; 
   position: absolute;
-  left: 25%;
-  top: 20%;
-}
-.back-img img{
-  border-radius: 50%;
-  width:15px;   
-  height: 15px;  
-  color: white; 
-  font-size: 1rem; 
-  position: absolute;
-  left: 25%;
-  top: 22%;
+  left: 23%;
+  top: 15%;
 }
 
 .achieveBack{
@@ -113,13 +104,12 @@ button:hover {
 }
 
 .achieveBack i {
-  border-radius: 50%;
-    width:15px;   
-  height: 15px; 
+  border-radius: 50%; 
     position: absolute;
-  left: 20%;
-  top: 10%;
+  left:23%;
+  top: 16%;
   color: #fff;
+  font-size: 0.5rem;
 }
 
 
