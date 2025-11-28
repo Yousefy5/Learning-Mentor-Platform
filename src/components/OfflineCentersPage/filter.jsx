@@ -13,6 +13,9 @@ function Filter({ tempCity, setTempCity, tempCategory, setTempCategory, handleAp
                 <option value="Giza">Giza</option>
                 <option value="Suez">Suez</option>
                 <option value="Luxor">Luxor</option>
+                <option value="Port Said">Port Said</option>
+                <option value="Aswan">Aswan</option>
+                <option value="Tanta">Tanta</option>
                 <option value="Mansoura">Mansoura</option>
               </select>
             </div>
