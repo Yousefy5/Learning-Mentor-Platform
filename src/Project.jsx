@@ -7,6 +7,7 @@ import PythonFundamentalsRoadmap from "./components/LearningTracksPage/PythonFun
 import WebDevelopmentFundamentalsRoadmap from "./components/LearningTracksPage/WebDevelopmentFundamentalsRoadmap";
 import ProgrammingFundamentals from "./components/LearningTracksPage/ProgrammingFundamentals";
 import GraphicDesignEssentials from "./components/LearningTracksPage/GraphicDesignEssentials";
+import ProductivityToolsMastery from "./components/LearningTracksPage/ProductivityToolsMastery";
 import Home from "./pages/Home";
 import OfflineCenters from "./pages/OfflineCenters";
 import QuizHub from "./pages/QuizHub";
@@ -24,6 +25,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 //   </Route>
 // );
+import QuestionBank from "./pages/QuestionBank";
+
+
 const routes = createBrowserRouter([
   {
     path: '/', element: <Home />, children: [
@@ -37,7 +41,9 @@ const routes = createBrowserRouter([
       { path: '/offline-centers', element: <OfflineCenters /> },
       { path: '/quizzes', element: <QuizHub /> },
       { path: '/placement-quiz', element: <PlacementQuiz /> },
-      { path: '/practice-quiz', element: <PracticeQuiz /> }
+      { path: '/practice-quiz', element: <PracticeQuiz /> },
+      { path: '/question-bank', element: <QuestionBank /> },
+      { path: '/learning-tracks/productivity-tools', element: <ProductivityToolsMastery /> }
     ]
   }
 ]);
