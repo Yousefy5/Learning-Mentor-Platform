@@ -34,9 +34,8 @@ function LearningTracks() {
                 <i className="bi bi-brush"></i>
                 <h5>Graphic Design Essentials</h5>
                 <p>
-                  Unleash your creativity with core design principles,
-                  typography, and industry-standard tools like Adobe Photoshop
-                  and Illustrator.
+                  Unleash your creativity with core design principles, refined typography, 
+                  and essential industry tools like Adobe Photoshop and Illustrator to develop visuals.
                 </p>
                 <Link to="/learning-tracks/graphic-design-essentials" className="btn btn-primary">Start Learning</Link>
               </div>
