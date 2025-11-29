@@ -46,21 +46,36 @@ function Navbar(){
       </ul>
 
       {/* <!-- My Account Button --> */}
-      <div className="d-flex ms-lg-3 mt-lg-0" id="MyAccountBtn">
+      {/* <div className="d-flex ms-lg-3 mt-lg-0" id="MyAccountBtn">
         <button className="btn btn-primary btn-sm" type="button" id="MyAccBtn">My Account</button>
-      </div>
+      </div> */}
+          {/* <div className="d-flex ms-lg-3 mt-lg-0">
+            <Link to="/login" className="btn btn-outline-primary btn-sm me-2">Log in</Link>
+            <Link to="/signup" className="btn btn-primary btn-sm">Sign Up</Link>
+          </div> */}
+          <div className="d-flex ms-lg-3 mt-lg-0">
+            <button
+              type="button"
+              className="btn btn-outline-primary btn-sm me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal">
+              Log in
+            </button>
+            <button
+              type="button"
+              className="btn btn-primary btn-sm btn1"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal">
+              Sign Up
+            </button>
+          </div>
     </div>
   </div>
 </nav>
 {/* <!-- End Navbar --> */}
 
 </>
-
     )
-    
-
-
-
 }
 
 export default Navbar;

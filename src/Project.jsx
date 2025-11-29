@@ -13,6 +13,8 @@ import OfflineCenters from "./pages/OfflineCenters";
 import QuizHub from "./pages/QuizHub";
 import PlacementQuiz from "./pages/PlacementQuiz";
 import PracticeQuiz from "./pages/PracticeQuiz";
+import LogIn from "./pages/Login";
+import SignUp from "./pages/Signup";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -49,7 +51,9 @@ const routes = createBrowserRouter([
       { path: '/about-us', element: <AboutUs /> },
       { path: '/resources', element: <Resources /> },
       { path: '/legal', element: <Legal /> },
-      { path: '/contact-us', element: <ContactUs /> }
+      { path: '/contact-us', element: <ContactUs /> },
+      { path: '/login', element: <LogIn /> },
+      { path: '/signup', element: <SignUp /> }
     ]
   }
 ]);
