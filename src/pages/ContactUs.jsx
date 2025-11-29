@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
     return (
-        <div className="container py-5">
+        <div className="container py-5 d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
             <div className="row justify-content-center">
                 <div className="col-lg-8">
                     <h1 className="mb-4 text-center">Contact Us</h1>
