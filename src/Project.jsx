@@ -25,6 +25,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   </Route>
 // );
 import QuestionBank from "./pages/QuestionBank";
+import AboutUs from "./pages/AboutUs";
+import Resources from "./pages/Resources";
+import Legal from "./pages/Legal";
+import ContactUs from "./pages/ContactUs";
 
 
 const routes = createBrowserRouter([
@@ -41,7 +45,11 @@ const routes = createBrowserRouter([
       { path: '/placement-quiz', element: <PlacementQuiz /> },
       { path: '/practice-quiz', element: <PracticeQuiz /> },
       { path: '/question-bank', element: <QuestionBank /> },
-      { path: '/learning-tracks/productivity-tools', element: <ProductivityToolsMastery /> }
+      { path: '/learning-tracks/productivity-tools', element: <ProductivityToolsMastery /> },
+      { path: '/about-us', element: <AboutUs /> },
+      { path: '/resources', element: <Resources /> },
+      { path: '/legal', element: <Legal /> },
+      { path: '/contact-us', element: <ContactUs /> }
     ]
   }
 ]);

@@ -1,4 +1,5 @@
 import '../styles/footer.css'
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -6,10 +7,10 @@ function Footer() {
       <footer className="footer mt-auto">
         <div className="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center py-3 border-top">
           <div className="d-flex gap-3 mb-2 mb-md-0">
-            <a href="#">About Us</a>
-            <a href="#">Resources</a>
-            <a href="#">Legal</a>
-            <a href="#">Contact Us</a>
+            <Link to="/about-us">About Us</Link>
+            <Link to="/resources">Resources</Link>
+            <Link to="/legal">Legal</Link>
+            <Link to="/contact-us">Contact Us</Link>
           </div>
 
           <div className="d-flex gap-3">
@@ -25,3 +26,4 @@ function Footer() {
 }
 
 export default Footer;
+
