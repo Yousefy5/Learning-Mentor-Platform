@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navbar from "./component/Navbar";
 import Footer from "../components/Footer";
 import "../assets/styles/My_Account.css";
@@ -13,11 +14,11 @@ function My_Account(){
         <div className="content-container">
           <aside className="sidebar">
             <nav className="sidebar-nav">
-              <a href="#" className="sidebar-link active" data-section="profile">Profile</a>
-              <a href="#" className="sidebar-link" data-section="security">Security</a>
-              <a href="#" className="sidebar-link" data-section="notifications">Notifications</a>
-              <a href="#" className="sidebar-link" data-section="billing">Billing</a>
-              <a href="#" className="sidebar-link sign-out" data-section="signout">Sign Out</a>
+              <Link to="#" className="sidebar-link active" data-section="profile">Profile</Link>
+              <Link to="#" className="sidebar-link" data-section="security">Security</Link>
+              <Link to="#" className="sidebar-link" data-section="notifications">Notifications</Link>
+              <Link to="#" className="sidebar-link" data-section="billing">Billing</Link>
+              <Link to="#" className="sidebar-link sign-out" data-section="signout">Sign Out</Link>
             </nav>
           </aside>
 
