@@ -12,7 +12,6 @@ function Course({ title, icon, firstLessonId, fieldId }) {
                 </div>
 
 
-                {/* نستخدم firstLessonId و fieldId لعمل الرابط الصحيح */}
                 <Link to={`/Content/${fieldId}/${firstLessonId}`}>
                     <button className="btn btn-coloro btn-sm w-100 mt-3 btn-c">
                         Continue Learning

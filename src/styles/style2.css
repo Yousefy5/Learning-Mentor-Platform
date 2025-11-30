@@ -254,3 +254,40 @@
                 flex-direction: column;
             }
         }
+
+        
+
+
+.MuiStepIcon-root {
+font-weight: 800 !important;
+  background-color: #ccc !important; 
+  color: #008C8C !important;         
+  border-radius: 50%;
+
+}
+.my-step-label .MuiStepLabel-label {
+  font-size: 14px !important;
+}
+
+
+.MuiStepIcon-root.Mui-active {
+  background-color: #015454; 
+  color: white;
+}
+
+.MuiStepIcon-root.Mui-completed {
+  background-color: white !important; 
+  color: #036f6f !important;
+}
+.desc {
+  font-size: 1.3rem;
+}
+
+.btn-hov:hover {
+  background-color: #027070;
+  color:white;
+}
+.btn-c:hover{
+    background-color: #027070;
+  color:white;
+}

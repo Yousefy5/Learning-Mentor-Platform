@@ -11,7 +11,7 @@ function Achievements({ title, icon, numOfThing, motive, button }) {
         </div>
 
         <h3 className="fw-bold mt-3">{numOfThing || '0'}</h3>
-        <p className="text-muted">{motive || 'Default Motive'}</p>
+        <p className="text-mutedd">{motive || 'Default Motive'}</p>
 
  
         {button && (

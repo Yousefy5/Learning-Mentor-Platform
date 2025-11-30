@@ -6,7 +6,7 @@ function SavedCenters({title,city}){
           <i className="bi bi-geo-alt mx-2 fs-3"></i>
             <p className="fw-bold mb-0 h6">{title}</p>
           </div>
-            <p className="text-muted medium mb-3 px-2">{city}, Egypt</p>
+            <p className="text-mutedd medium mb-3 px-2">{city}, Egypt</p>
             <button className="btn btn-coloro2 border btn-sm w-100 btn-hov">View Details</button>
           </div>
         </div>
