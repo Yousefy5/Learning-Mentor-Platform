@@ -1,4 +1,4 @@
-function SavedCenters({title,city,link}){
+function SavedCenters({title,city}){
     return(
         <div className="col-12 col-md-3">
               <div className="p-3  rounded  text-start h-100">
@@ -7,13 +7,7 @@ function SavedCenters({title,city,link}){
             <p className="fw-bold mb-0 h6">{title}</p>
           </div>
             <p className="text-mutedd medium mb-3 px-2">{city}, Egypt</p>
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-coloro2 border btn-sm w-100 btn-hov">
-              View Location
-            </a>
+            <button className="btn btn-coloro2 border btn-sm w-100 btn-hov">View Details</button>
           </div>
         </div>
     )

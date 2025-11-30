@@ -15,7 +15,7 @@ import '../../styles/OfflineCenters.css';
 
 function Main({ city, category }) {
     const cardsData =  [
-        {img: center, title: 'Cairo Innovation Center', city: "Cairo", discription: '123 Nile St, Zamalek, Cairo', btn1: 'Programming', btn2: 'Productivity Tools', location: 'https://maps.app.goo.gl/AR3zFemYAvH6YSee9'},
+        {img: center, title: 'Cairo Innovation Center', city: "Cairo", discription: '123 Nile St, Zamalek, Cairo', btn1: 'Programming', btn2: 'Productivity Tools', location: 'https://maps.app.goo.gl/uq5n2XuZX4Q7UZFE7'},
         {img: school, title: 'Alexandria Art School', city: "Alexandria", discription: '45 Corniche Rd, Alexandria', btn1: 'Graphic Design', btn2: 'Productivity Tools', location: 'https://maps.app.goo.gl/r4z2D6s2MXA2koqj7'},
         {img: academy, title: 'Giza Skill Academy', city: "Giza", discription: '78 Pyramids Ave, Giza', btn1: 'Programming', btn2: 'Graphic Design', location: 'https://maps.app.goo.gl/6sY6s5fjQWYNSfyt9'},
         {img: hub, title: 'Luxor Learning Hub', city: "Luxor", discription: '10 Temple St, Luxor', btn1: 'Productivity Tools', btn2: 'Programming', location: 'https://maps.app.goo.gl/vgn6z3YdEmkgLNem6'},
@@ -23,7 +23,7 @@ function Main({ city, category }) {
         {img: labs, title: 'Suez Creative Labs', city: "Suez", discription: '35 Canal St, Suez', btn1: 'Graphic Design', btn2: 'Productivity Tools', location: 'https://maps.app.goo.gl/6RYZ5PgwxwVnNm6y6'},
         {img: img1, title: 'Alexandria Digital Campus', city: "Alexandria", discription: '90 Stanley Rd, Alexandria', btn1: 'Programming', btn2: 'Productivity Tools', location: 'https://maps.app.goo.gl/r4z2D6s2MXA2koqj7'},
         {img: img2, title: 'Aswan Learning Studio', city: "Aswan", discription: '22 Nubia St, Aswan', btn1: 'Graphic Design', btn2: 'Productivity Tools', location: 'https://maps.app.goo.gl/5D4BzvsHdV8YYXh69'},
-        {img: img3, title: 'Cairo Tech Studio', city: "Cairo", discription: '56 Tahrir St, Downtown, Cairo', btn1: 'Graphic Design', btn2: 'Programming', location: 'https://maps.app.goo.gl/AR3zFemYAvH6YSee9'},
+        {img: img3, title: 'Cairo Tech Studio', city: "Cairo", discription: '56 Tahrir St, Downtown, Cairo', btn1: 'Graphic Design', btn2: 'Programming', location: 'https://maps.app.goo.gl/uq5n2XuZX4Q7UZFE7'},
         {img: img4, title: 'Port Said Learning Center', city: "Port Said", discription: '12 Al-Gomhoreya St, Port Said', btn1: 'Productivity Tools', btn2: 'Programming', location: 'https://maps.app.goo.gl/RHN35gEjvrMSdpE28'},
         {img: img5, title: 'Tanta Digital Hub', city: "Tanta", discription: '8 El-Nokhba Sq, Tanta', btn1: 'Programming', btn2: 'Graphic Design', location: 'https://maps.app.goo.gl/MN9hUe6NCPxs8m929'},
         {img: img6, title: 'Mansoura Skills Center', city: "Mansoura", discription: '18 Al-Gomhoreya St, Mansoura', btn1: 'Graphic Design', btn2: 'Productivity Tools', location: 'https://maps.app.goo.gl/r7dfo3oN9mUwtS5m7'},
