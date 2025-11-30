@@ -22,9 +22,9 @@ function PythonFundamentalsRoadmap() {
         paragraphText1="Learn fundamentals of Python and how to set up the environment."
         paragraphText2="Understand variables, data types, and operators in Python."
         paragraphText3="Master conditional statements and looping techniques."
-        photo1="./public/assests/Imgs/Python/Introduction to Python & Setup.svg"
-        photo2="./public/assests/Imgs/Python/Variables, Data Types & Operators.svg"
-        photo3="./public/assests/Imgs/Python/Conditions & Loops.svg"
+        photo1="/assests/Imgs/Python/Introduction to Python & Setup.svg"
+        photo2="/assests/Imgs/Python/Variables, Data Types & Operators.svg"
+        photo3="/assests/Imgs/Python/Conditions & Loops.svg"
       />
 
       <ModuleCards
@@ -36,9 +36,9 @@ function PythonFundamentalsRoadmap() {
         paragraphText1="Learn how to create functions and organize code with modules."
         paragraphText2="Explore lists, tuples, sets, dictionaries, and their use cases."
         paragraphText3="Work with files to read, write, and manage data."
-        photo1="./public/assests/Imgs/Python/Functions.svg"
-        photo2="./public/assests/Imgs/Python/Data Structures.svg"
-        photo3="./public/assests/Imgs/Python/File Handling.svg"
+        photo1="/assests/Imgs/Python/Functions.svg"
+        photo2="/assests/Imgs/Python/Data Structures.svg"
+        photo3="/assests/Imgs/Python/File Handling.svg"
       />
 
       <ModuleCards
@@ -50,9 +50,9 @@ function PythonFundamentalsRoadmap() {
         paragraphText1="Understand the concept of classes and how objects are created."
         paragraphText2="Learn how inheritance and polymorphism help build scalable programs."
         paragraphText3="Master abstraction and encapsulation to write clean and secure code."
-        photo1="./public/assests/Imgs/Python/Classes & Objects.svg"
-        photo2="./public/assests/Imgs/Python/Inheritance & Polymorphism.svg"
-        photo3="./public/assests/Imgs/Python/Abstraction & Encapsulation.svg"
+        photo1="/assests/Imgs/Python/Classes & Objects.svg"
+        photo2="/assests/Imgs/Python/Inheritance & Polymorphism.svg"
+        photo3="/assests/Imgs/Python/Abstraction & Encapsulation.svg"
       />
     </>
   );

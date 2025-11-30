@@ -20,9 +20,9 @@ function WebDevelopmentFundamentalsRoadmap() {
         paragraphText1="Learn the foundation of web structure with HTML elements and attributes."
         paragraphText2="Style web pages with CSS properties, layouts, and selectors."
         paragraphText3="Learn interactivity and logic through JavaScript fundamentals."
-        photo1="./public/assests/Imgs/page3/HTM_Course.svg"
-        photo2="./public/assests/Imgs/page3/CSS_Course.svg"
-        photo3="./public/assests/Imgs/page3/JS_Course.svg"
+        photo1="/assests/Imgs/page3/HTM_Course.svg"
+        photo2="/assests/Imgs/page3/CSS_Course.svg"
+        photo3="/assests/Imgs/page3/JS_Course.svg"
       />
       <ModuleCards
         theme={themes.default}
@@ -33,9 +33,9 @@ function WebDevelopmentFundamentalsRoadmap() {
         paragraphText1="Learn how to interact with the DOM to create dynamic experiences."
         paragraphText2="Master event handling to make applications responsive and interactive."
         paragraphText3="Get familiar with modern UI libraries like React."
-        photo1="./public/assests/Imgs/page3/DOM_Course.svg"
-        photo2="./public/assests/Imgs/page3/Events_Course.svg"
-        photo3="./public/assests/Imgs/page3/Framwork_Course.svg"
+        photo1="/assests/Imgs/page3/DOM_Course.svg"
+        photo2="/assests/Imgs/page3/Events_Course.svg"
+        photo3="/assests/Imgs/page3/Framwork_Course.svg"
       />
       <ModuleCards
         theme={themes.default}
@@ -46,9 +46,9 @@ function WebDevelopmentFundamentalsRoadmap() {
         paragraphText1="Learn the foundation of web structure with HTML elements and attributes."
         paragraphText2="Style web pages with CSS properties, layouts, and selectors."
         paragraphText3="Learn interactivity and logic through JavaScript fundamentals."
-        photo1="./public/assests/Imgs/page3/HTM_Course.svg"
-        photo2="./public/assests/Imgs/page3/CSS_Course.svg"
-        photo3="./public/assests/Imgs/page3/JS_Course.svg"
+        photo1="/assests/Imgs/page3/HTM_Course.svg"
+        photo2="/assests/Imgs/page3/CSS_Course.svg"
+        photo3="/assests/Imgs/page3/JS_Course.svg"
       />
     </>
   );
