@@ -1,0 +1,72 @@
+
+.btn-coloro{
+  background-color: #008C8C; 
+  color: white;
+}
+.btn-coloro2{
+   color: rgb(54, 52, 52);
+}
+.coloro{
+    background-color: #008C8C; 
+  color: white;
+}
+
+.progress-bar {
+  background-color: #008C8C;
+  height: 100%;
+  width: 25%; 
+  border-radius: 10px;
+  transition: width 0.5s ease; 
+}
+
+button:hover {
+  background-color: #042a23; 
+  color: white;
+}
+
+.back-img i {
+  border-radius: 50%;
+  width:20px;   
+  height: 20px;  
+  color: white; 
+  font-size: 1rem; 
+  position: absolute;
+  left: 23%;
+  top: 12%;
+}
+
+.achieveBack{
+  background-color:#e58611;
+  border-radius: 50%;
+    width:30px;   
+  height: 30px;  
+  position: relative;
+  color: white;
+}
+
+.achieveBack i {
+  border-radius: 50%; 
+    position: absolute;
+  left:23%;
+  top: 13%;
+  color: #fff;
+  font-size: 0.5rem;
+}
+
+
+.back-img {
+  width: 30px;
+  height: 30px;
+  background-color: #008C8C; 
+  border-radius: 50%;
+position: relative;
+} 
+
+.text-mutedd{
+color: rgb(79, 75, 75);
+font-weight: 600;
+display: flex;
+margin-top: 1rem;
+margin-bottom: 1.7rem;
+
+}

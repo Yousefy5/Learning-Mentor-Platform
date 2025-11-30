@@ -1,0 +1,25 @@
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.hiw-icon {
+    animation: bounceIn 1s ease;
+}
+
+.learning-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+.learning-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.hiw-icon i {
+    transition: transform 0.3s ease;
+}
+.hiw-icon:hover i {
+    transform: rotate(10deg) scale(1.1);
+}
