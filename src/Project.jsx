@@ -1,5 +1,8 @@
+import React from "react";
 import { Route, createBrowserRouter, RouterProvider } from "react-router-dom";
 // createBrowserRouter - createRoutesFromElements
+// Context
+import { DataContext, learningArticles } from "./context/DataContext";
 import ReactDOM from "react-dom/client";
 import LandingPage from "./pages/LandingPage";
 import LearningTracks from "./pages/LearningTracks";
@@ -15,8 +18,17 @@ import PlacementQuiz from "./pages/PlacementQuiz";
 import PracticeQuiz from "./pages/PracticeQuiz";
 import LogIn from "./pages/Login";
 import SignUp from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
+import Content from "./pages/Content";
+
+import QuestionBank from "./pages/QuestionBank";
+import AboutUs from "./pages/AboutUs";
+import Resources from "./pages/Resources";
+import Legal from "./pages/Legal";
+import ContactUs from "./pages/ContactUs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 
 // createRoutesFromElements(
 //   <Route>
@@ -26,11 +38,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 //   </Route>
 // );
-import QuestionBank from "./pages/QuestionBank";
-import AboutUs from "./pages/AboutUs";
-import Resources from "./pages/Resources";
-import Legal from "./pages/Legal";
-import ContactUs from "./pages/ContactUs";
 
 
 const routes = createBrowserRouter([
@@ -53,11 +60,18 @@ const routes = createBrowserRouter([
       { path: '/legal', element: <Legal /> },
       { path: '/contact-us', element: <ContactUs /> },
       { path: '/login', element: <LogIn /> },
-      { path: '/signup', element: <SignUp /> }
+      { path: '/signup', element: <SignUp /> },
+      { path: "/dashboard", element: <Dashboard /> },
+      { path: "/content/:fieldId/:itemId", element: <Content /> }
     ]
   }
 ]);
 
 root.render(
-  <RouterProvider router={routes} />
+  // <RouterProvider router={routes} />
+  <React.StrictMode>
+    <DataContext.Provider value={learningArticles}>
+      <RouterProvider router={routes} />
+    </DataContext.Provider>
+  </React.StrictMode>
 );
