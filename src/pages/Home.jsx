@@ -7,9 +7,11 @@ import ModuleCards from "../components/LearningTracksPage/components/ModuleCards
 import WebDevelopmentFundamentalsRoadmap from "../components/LearningTracksPage/WebDevelopmentFundamentalsRoadmap";
 import ProgrammingFundamentals from "../components/LearningTracksPage/ProgrammingFundamentals";
 import LandingPage from "./LandingPage";
+import ScrollToTop from "../components/ScrollToTop";
 function Home() {
   return (
     <div className="d-flex flex-column min-vh-100">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-grow-1">
         <Outlet />

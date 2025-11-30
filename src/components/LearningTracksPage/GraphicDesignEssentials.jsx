@@ -66,9 +66,9 @@ function GraphicDesignEssentials() {
         paragraphText1="Discover what graphic design is and how creativity meets purpose."
         paragraphText2="Learn balance, contrast, alignment, and rhythm in visual design."
         paragraphText3="Master layout techniques for professional and eye-catching designs."
-        photo1="../public/assests/Imgs/Graphic/Edit photo-rafiki.svg"
-        photo2="../public/assests/Imgs/Graphic/Design inspiration-amico.svg"
-        photo3="../public/assests/Imgs/Graphic/Design inspiration-pana.svg"
+        photo1="/assests/Imgs/Graphic/Edit photo-rafiki.svg"
+        photo2="/assests/Imgs/Graphic/Design inspiration-amico.svg"
+        photo3="/assests/Imgs/Graphic/Design inspiration-pana.svg"
       />
 
       {/* ===== Module 2 ===== */}
@@ -81,9 +81,9 @@ function GraphicDesignEssentials() {
         paragraphText1="Learn the basics of photo editing, layers, and adjustments."
         paragraphText2="Design scalable vector graphics for logos and illustrations."
         paragraphText3="Use modern, fast tools to create collaborative design projects."
-        photo1="../public/assests/Imgs/Graphic/Edit photo-amico.svg"
-        photo2="../public/assests/Imgs/Graphic/Designer life-pana.svg"
-        photo3="../public/assests/Imgs/Graphic/Creation process-bro.svg"
+        photo1="/assests/Imgs/Graphic/Edit photo-amico.svg"
+        photo2="/assests/Imgs/Graphic/Designer life-pana.svg"
+        photo3="/assests/Imgs/Graphic/Creation process-bro.svg"
       />
 
       {/* ===== Module 3 ===== */}
@@ -96,9 +96,9 @@ function GraphicDesignEssentials() {
         paragraphText1="Learn how brands create visual stories through design."
         paragraphText2="Craft memorable logos that reflect identity and purpose."
         paragraphText3="Understand how color impacts emotion and brand perception."
-        photo1="../public/assests/Imgs/Graphic/Landing page-amico.svg"
-        photo2="../public/assests/Imgs/Graphic/Artist-pana.svg"
-        photo3="../public/assests/Imgs/Graphic/Design community-pana.svg"
+        photo1="/assests/Imgs/Graphic/Landing page-amico.svg"
+        photo2="/assests/Imgs/Graphic/Artist-pana.svg"
+        photo3="/assests/Imgs/Graphic/Design community-pana.svg"
       />
     </>
   );
