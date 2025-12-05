@@ -3,14 +3,16 @@ import Achievements from "./Achievements";
 import Course from "./Course";
 import SavedCenters from "./SavedCenters";
 import { DataContext } from '../../context/DataContext';
+import { useProgress } from '../../context/ProgressContext';
 
 function Main() {
     const courses = useContext(DataContext);
-    console.log(courses);
+    const { getProgress } = useProgress(); 
 
     const displayCourses = courses.map((course) => {
- 
-        const firstLessonId = course.items[0]?.id
+        const firstLessonId = course.items[0]?.id;
+        const fieldPercentage = getProgress(course.fieldId); 
+        
         return (
             <Course
                 key={course.fieldId}
@@ -18,6 +20,7 @@ function Main() {
                 icon={course.icon}
                 fieldId={course.fieldId}
                 firstLessonId={firstLessonId}
+                percentage={fieldPercentage} 
             />
         );
     });
@@ -54,3 +57,88 @@ function Main() {
 }
 
 export default Main;
+
+//da 3shan ama ygelk api f3ln thoty keyam vta3to fe courses msh context ely fo2 lesa msh shghal
+    // const [courses, setCourses] = useState([]);
+    // const [achievements, setAchievements] = useState([]);
+    // const [savedCenters, setSavedCenters] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
+
+    // useEffect(() => { */}
+    {/* //     const fetchData = async () => { */}
+       {/* try { */}
+    //             setLoading(true);
+                
+    //             // Fetch courses data
+    //             const coursesResponse = await fetch('/api/courses');
+    //             if (!coursesResponse.ok) throw new Error('Failed to fetch courses');
+    //             const coursesData = await coursesResponse.json();
+    //             setCourses(coursesData);
+                
+    //             // Fetch achievements data
+    //             const achievementsResponse = await fetch('/api/achievements');
+    //             if (!achievementsResponse.ok) throw new Error('Failed to fetch achievements');
+    //             const achievementsData = await achievementsResponse.json();
+    //             setAchievements(achievementsData);
+
+    //             // Fetch saved learning centers
+    //             const centersResponse = await fetch('/api/saved-centers');
+    //             if (!centersResponse.ok) throw new Error('Failed to fetch learning centers');
+    //             const centersData = await centersResponse.json();
+    //             setSavedCenters(centersData);
+
+    //             setLoading(false);
+    //         } catch (err) {
+    //             setError(err.message);
+    //             setLoading(false);
+    //             console.error('Error fetching data:', err);
+    //         }
+    //     };
+
+    //     fetchData();
+    // }, []);
+
+    // const displayCourses = courses.map((course) => {
+    //     const firstLessonId = course.items[0]?.id;
+    //     return (
+    //         <Course
+    //             key={course.fieldId}
+    //             title={course.field}
+    //             icon={course.icon}
+    //             fieldId={course.fieldId}
+    //             firstLessonId={firstLessonId}
+    //         />
+    //     );
+    // });
+        // const [achievements, setAchievements] = useState([]);
+    // const [savedCenters, setSavedCenters] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             setLoading(true);
+                
+    //             const achievementsResponse = await fetch('/api/achievements');
+    //             if (!achievementsResponse.ok) throw new Error('Failed to fetch achievements');
+    //             const achievementsData = await achievementsResponse.json();
+    //             setAchievements(achievementsData);
+
+            
+    //             const centersResponse = await fetch('/api/saved-centers');
+    //             if (!centersResponse.ok) throw new Error('Failed to fetch learning centers');
+    //             const centersData = await centersResponse.json();
+    //             setSavedCenters(centersData);
+
+    //             setLoading(false);
+    //         } catch (err) {
+    //             setError(err.message);
+    //             setLoading(false);
+    //             console.error('Error fetching data:', err);
+    //         }
+    //     };
+
+    //     fetchData();
+    // }, []);

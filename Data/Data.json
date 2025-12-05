@@ -1,0 +1,299 @@
+{
+  "learningArticles": [
+    {
+      "field": "Web Development",
+      "fieldId": 1,
+      "icon": "bi bi-code me-2",
+      "items": [
+        {
+          "id": 1,
+          "title": "Responsive Web Design Fundamentals",
+          "desc": "Master the art of creating websites that adapt seamlessly across all devices. Learn about flexible grids, media queries, and mobile-first approaches that ensure your web applications look stunning on smartphones, tablets, and desktops. Understand CSS frameworks like Bootstrap and Tailwind, and discover how to build fluid layouts that enhance user experience regardless of screen size.",
+          "img": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80"
+        },
+        {
+          "id": 2,
+          "title": "Modern JavaScript and ES6+ Features",
+          "desc": "Dive deep into contemporary JavaScript programming with ES6 and beyond. Explore arrow functions, destructuring, promises, async/await, and modules that make your code cleaner and more efficient. Learn how these modern features improve readability, reduce bugs, and enable you to write professional-grade applications that leverage the full power of JavaScript.",
+          "img": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800&q=80"
+        },
+        {
+          "id": 3,
+          "title": "RESTful API Development and Integration",
+          "desc": "Understand how to build and consume APIs that power modern web applications. Learn REST principles, HTTP methods, status codes, and authentication strategies. Discover how to create scalable backend services and integrate third-party APIs to extend your application's functionality, enabling seamless data exchange between client and server.",
+          "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
+        },
+        {
+          "id": 4,
+          "title": "Version Control with Git and GitHub",
+          "desc": "Master the essential skill of version control for collaborative development. Learn Git workflows, branching strategies, merge conflicts resolution, and best practices for commit messages. Understand how to use GitHub for code hosting, pull requests, and team collaboration, ensuring your projects are organized and your code history is trackable.",
+          "img": "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&q=80"
+        },
+        {
+          "id": 5,
+          "title": "Web Performance Optimization Techniques",
+          "desc": "Learn how to make your websites lightning-fast and efficient. Explore techniques like code splitting, lazy loading, image optimization, and caching strategies. Understand Core Web Vitals, reduce bundle sizes, and implement performance monitoring to create web applications that load quickly and provide exceptional user experiences.",
+          "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+        }
+      ]
+    },
+    {
+      "field": "Graphic Design",
+      "fieldId": 2,
+      "icon": "bi bi-easel",
+      "items": [
+        {
+          "id": 6,
+          "title": "Color Theory and Psychology in Design",
+          "desc": "Unlock the power of color to create emotionally resonant designs. Learn about color harmonies, contrast ratios, and the psychological impact of different hues. Understand how to build effective color palettes that communicate brand identity, enhance readability, and guide user attention to create visually compelling and accessible designs.",
+          "img": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&q=80"
+        },
+        {
+          "id": 7,
+          "title": "Typography Principles for Digital Media",
+          "desc": "Master the art of selecting and pairing typefaces for maximum impact. Learn about font families, hierarchy, spacing, and readability across different screen sizes. Discover how typography influences user experience and brand perception, and develop the skills to create text layouts that are both beautiful and functional.",
+          "img": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80"
+        },
+        {
+          "id": 8,
+          "title": "Layout Design and Visual Hierarchy",
+          "desc": "Create balanced, engaging compositions that guide viewer attention effectively. Learn about grid systems, white space, alignment, and the principles of visual flow. Understand how to organize elements to create clear hierarchies that make information easy to digest and improve overall user engagement with your designs.",
+          "img": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+        },
+        {
+          "id": 9,
+          "title": "Logo Design and Brand Identity",
+          "desc": "Develop memorable brand identities that stand the test of time. Learn the principles of effective logo design, including simplicity, versatility, and memorability. Explore the complete brand identity process from research and concept development to creating comprehensive brand guidelines that ensure consistency across all touchpoints.",
+          "img": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80"
+        },
+        {
+          "id": 10,
+          "title": "Design Tools Mastery: Adobe Creative Suite",
+          "desc": "Gain proficiency in industry-standard design software including Photoshop, Illustrator, and InDesign. Learn essential techniques for photo editing, vector illustration, and layout design. Discover keyboard shortcuts, workflow optimization, and best practices that professional designers use to create stunning visuals efficiently.",
+          "img": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&q=80"
+        }
+      ]
+    },
+    {
+      "field": "Project Management",
+      "fieldId": 3,
+      "icon": "bi bi-lightbulb",
+      "items": [
+        {
+          "id": 11,
+          "title": "Agile Methodology and Scrum Framework",
+          "desc": "Transform your project delivery with Agile principles and Scrum practices. Learn about sprints, daily standups, retrospectives, and continuous improvement. Understand how to break down complex projects into manageable iterations, adapt to changing requirements, and deliver value incrementally while maintaining team collaboration and transparency.",
+          "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+        },
+        {
+          "id": 12,
+          "title": "Risk Management and Mitigation Strategies",
+          "desc": "Identify, assess, and manage project risks before they become problems. Learn systematic approaches to risk identification, probability assessment, and impact analysis. Develop contingency plans and mitigation strategies that keep your projects on track even when unexpected challenges arise.",
+          "img": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+        },
+        {
+          "id": 13,
+          "title": "Stakeholder Communication and Management",
+          "desc": "Build strong relationships with stakeholders through effective communication. Learn how to identify stakeholder needs, manage expectations, and provide transparent updates. Discover techniques for handling difficult conversations, presenting project status, and ensuring all parties remain aligned throughout the project lifecycle.",
+          "img": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+        },
+        {
+          "id": 14,
+          "title": "Resource Planning and Budget Control",
+          "desc": "Master the art of allocating resources efficiently and managing project budgets. Learn techniques for estimating costs, tracking expenses, and optimizing resource utilization. Understand how to balance competing priorities, handle budget constraints, and make data-driven decisions that maximize project value.",
+          "img": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+        },
+        {
+          "id": 15,
+          "title": "Project Management Tools and Software",
+          "desc": "Leverage modern PM tools to streamline workflows and enhance collaboration. Explore platforms like Jira, Trello, Asana, and Monday.com. Learn how to set up projects, track progress, manage dependencies, and generate reports that provide visibility into project health and team productivity.",
+          "img": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80"
+        }
+      ]
+    },
+    {
+      "field": "Productivity Tools for Success",
+      "fieldId": 4,
+      "icon": "bi bi-lightbulb",
+      "items": [
+        {
+          "id": 16,
+          "title": "Time Management with Time-Blocking Technique",
+          "desc": "Maximize your productivity by mastering time-blocking strategies. Learn how to schedule focused work sessions, batch similar tasks, and protect your calendar from distractions. Discover how successful professionals structure their days to accomplish more while maintaining work-life balance and reducing stress.",
+          "img": "https://images.unsplash.com/photo-1501139083538-0139583c060f?w=800&q=80"
+        },
+        {
+          "id": 17,
+          "title": "Note-Taking Systems: Zettelkasten and Beyond",
+          "desc": "Transform how you capture and organize knowledge with effective note-taking systems. Learn about the Zettelkasten method, Cornell notes, and digital tools like Notion, Obsidian, and Roam Research. Discover how to create a second brain that helps you retain information and generate new insights.",
+          "img": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80"
+        },
+        {
+          "id": 18,
+          "title": "Task Automation with Zapier and IFTTT",
+          "desc": "Automate repetitive tasks and connect your favorite apps seamlessly. Learn how to create workflows that save hours each week by automating email responses, social media posting, data entry, and more. Discover the power of no-code automation to streamline your digital life and focus on high-value activities.",
+          "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+        },
+        {
+          "id": 19,
+          "title": "Focus and Concentration: The Pomodoro Technique",
+          "desc": "Enhance your focus and maintain peak mental performance throughout the day. Learn the Pomodoro Technique of working in focused 25-minute intervals with strategic breaks. Understand how to combat procrastination, manage energy levels, and create an environment conducive to deep work and sustained concentration.",
+          "img": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80"
+        },
+        {
+          "id": 20,
+          "title": "Email Management and Inbox Zero Strategy",
+          "desc": "Tame your inbox and reclaim hours from email overwhelm. Learn the Inbox Zero methodology, email filtering techniques, and communication best practices. Discover how to process emails efficiently, reduce response time, and maintain a clutter-free inbox that serves you rather than distracts you.",
+          "img": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&q=80"
+        }
+      ]
+    },
+    {
+      "field": "Data Science Using Python",
+      "fieldId": 5,
+      "icon": "bi bi-code me-2",
+      "items": [
+        {
+          "id": 21,
+          "title": "Python Fundamentals for Data Analysis",
+          "desc": "Build a solid foundation in Python programming specifically for data science. Learn essential syntax, data structures, loops, functions, and object-oriented concepts. Understand how to write clean, efficient code and leverage Python's simplicity to manipulate data, perform calculations, and prepare for advanced analytics tasks.",
+          "img": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&q=80"
+        },
+        {
+          "id": 22,
+          "title": "Data Manipulation with Pandas Library",
+          "desc": "Master Pandas, the cornerstone library for data manipulation in Python. Learn how to load, clean, transform, and analyze datasets efficiently. Explore DataFrames, Series, indexing, filtering, grouping, and merging operations that enable you to handle real-world messy data and extract meaningful insights.",
+          "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+        },
+        {
+          "id": 23,
+          "title": "Data Visualization with Matplotlib and Seaborn",
+          "desc": "Transform data into compelling visual stories using Python's visualization libraries. Learn to create line plots, bar charts, histograms, heatmaps, and complex multi-panel visualizations. Discover design principles that make your charts informative, accurate, and visually appealing for presentations and reports.",
+          "img": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80"
+        },
+        {
+          "id": 24,
+          "title": "Machine Learning Basics with Scikit-Learn",
+          "desc": "Enter the world of machine learning with Python's scikit-learn library. Learn fundamental algorithms including linear regression, decision trees, and clustering. Understand the complete ML workflow from data preprocessing and model training to evaluation and prediction, enabling you to build intelligent data-driven applications.",
+          "img": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80"
+        },
+        {
+          "id": 25,
+          "title": "Statistical Analysis and Hypothesis Testing",
+          "desc": "Apply statistical methods to extract insights and validate findings from data. Learn descriptive statistics, probability distributions, hypothesis testing, and confidence intervals using Python. Understand how to make data-driven decisions backed by statistical evidence and communicate results effectively to stakeholders.",
+          "img": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&q=80"
+        }
+      ]
+    },
+    {
+      "field": "Mobile Application",
+      "fieldId": 6,
+      "icon": "bi bi-easel",
+      "items": [
+        {
+          "id": 26,
+          "title": "iOS Development with Swift and SwiftUI",
+          "desc": "Create beautiful native iOS applications using Apple's modern Swift language and SwiftUI framework. Learn declarative UI design, state management, navigation, and integration with iOS features like camera, location, and notifications. Discover how to build apps that follow Apple's Human Interface Guidelines and deliver exceptional user experiences.",
+          "img": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+        },
+        {
+          "id": 27,
+          "title": "Android Development with Kotlin and Jetpack Compose",
+          "desc": "Develop powerful Android applications using Kotlin and the modern Jetpack Compose toolkit. Learn about Android architecture components, Material Design principles, and reactive programming. Understand how to build apps that work seamlessly across diverse Android devices and leverage platform-specific features effectively.",
+          "img": "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&q=80"
+        },
+        {
+          "id": 28,
+          "title": "Cross-Platform Development with React Native",
+          "desc": "Build mobile apps for both iOS and Android using a single JavaScript codebase with React Native. Learn component-based architecture, navigation patterns, and native module integration. Discover how to achieve near-native performance while maximizing code reuse and reducing development time and costs.",
+          "img": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
+        },
+        {
+          "id": 29,
+          "title": "Mobile App UI/UX Design Patterns",
+          "desc": "Design intuitive mobile interfaces that users love. Learn platform-specific design guidelines, touch targets, gestures, and navigation patterns. Understand how mobile context differs from desktop, optimize for small screens, and create seamless experiences that feel natural on touchscreen devices.",
+          "img": "https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?w=800&q=80"
+        },
+        {
+          "id": 30,
+          "title": "App Store Optimization and Publishing",
+          "desc": "Successfully launch your mobile app and maximize downloads. Learn the complete publishing process for App Store and Google Play, including app store optimization techniques, keyword research, compelling screenshots, and review management. Discover strategies to improve visibility and attract your target audience.",
+          "img": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=80"
+        }
+      ]
+    },
+    {
+      "field": "Intro to AI",
+      "fieldId": 7,
+      "icon": "bi bi-code me-2",
+      "items": [
+        {
+          "id": 31,
+          "title": "Understanding Artificial Intelligence Fundamentals",
+          "desc": "Demystify AI by understanding its core concepts, history, and applications. Learn the difference between narrow AI and general AI, explore machine learning, deep learning, and neural networks. Discover how AI is transforming industries from healthcare to finance and what the future holds for this revolutionary technology.",
+          "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
+        },
+        {
+          "id": 32,
+          "title": "Natural Language Processing Basics",
+          "desc": "Explore how AI understands and generates human language. Learn about tokenization, sentiment analysis, named entity recognition, and language models. Understand the technology behind chatbots, translation services, and text generation tools that are changing how we interact with computers.",
+          "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80"
+        },
+        {
+          "id": 33,
+          "title": "Computer Vision and Image Recognition",
+          "desc": "Discover how machines learn to see and interpret visual information. Learn about convolutional neural networks, image classification, object detection, and facial recognition. Explore real-world applications from autonomous vehicles to medical diagnosis that leverage computer vision technology.",
+          "img": "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?w=800&q=80"
+        },
+        {
+          "id": 34,
+          "title": "Ethics and Responsible AI Development",
+          "desc": "Understand the critical ethical considerations in AI development and deployment. Learn about bias in algorithms, privacy concerns, transparency, and accountability. Explore frameworks for responsible AI that ensure technology serves humanity's best interests while minimizing potential harms and unintended consequences.",
+          "img": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80"
+        },
+        {
+          "id": 35,
+          "title": "AI Tools and Platforms for Beginners",
+          "desc": "Get hands-on with accessible AI tools and platforms that require no coding experience. Explore services like ChatGPT, Midjourney, and Google's AutoML. Learn how to leverage pre-trained models, API services, and no-code platforms to integrate AI capabilities into your projects and workflows.",
+          "img": "https://images.unsplash.com/photo-1676277791608-7b1177d0e08a?w=800&q=80"
+        }
+      ]
+    },
+    {
+      "field": "Digital Marketing Strategy",
+      "fieldId": 8,
+      "items": [
+        {
+          "id": 36,
+          "title": "Content Marketing and Storytelling",
+          "desc": "Master the art of creating valuable content that attracts and engages your target audience. Learn content strategy, storytelling techniques, and how to develop a consistent brand voice. Discover how to create blogs, videos, and social posts that educate, entertain, and build lasting relationships with customers.",
+          "img": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80"
+        },
+        {
+          "id": 37,
+          "title": "Search Engine Optimization (SEO) Essentials",
+          "desc": "Improve your website's visibility in search engine results through strategic SEO practices. Learn keyword research, on-page optimization, link building, and technical SEO. Understand how search engines rank content and discover white-hat techniques to drive organic traffic and improve your online presence.",
+          "img": "https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=800&q=80"
+        },
+        {
+          "id": 38,
+          "title": "Social Media Marketing Strategy",
+          "desc": "Build engaged communities and drive business results through strategic social media marketing. Learn platform-specific strategies for Facebook, Instagram, LinkedIn, and Twitter. Discover content planning, community management, influencer partnerships, and analytics that turn followers into customers.",
+          "img": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
+        },
+        {
+          "id": 39,
+          "title": "Email Marketing Campaigns That Convert",
+          "desc": "Create email campaigns that drive engagement and revenue. Learn list building, segmentation, personalization, and A/B testing. Discover how to write compelling subject lines, design mobile-friendly templates, and optimize sending times to maximize open rates, click-through rates, and conversions.",
+          "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80"
+        },
+        {
+          "id": 40,
+          "title": "Marketing Analytics and Data-Driven Decisions",
+          "desc": "Measure marketing performance and optimize campaigns using data analytics. Learn about key metrics, Google Analytics, conversion tracking, and attribution models. Discover how to create dashboards, interpret data insights, and make informed decisions that improve ROI and achieve business objectives.",
+          "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+        }
+      ]
+    }
+  ]
+}
