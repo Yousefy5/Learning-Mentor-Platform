@@ -3,10 +3,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/My_Account.css";
 
+
 function My_Account(){
    return (
    <>
-     <div className="Container">
+     <div className="Container myaccount-page">
      <div className="row">
       
        <main className="main-content">
@@ -46,17 +47,17 @@ function My_Account(){
                 <form className="profile-form">
                   <div className="form-group">
                     <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" value="Ali Ohmhred" className="form-input"/>
+                    <input type="text" id="fullName" name="fullName" value="Aya Mohamed" className="form-input"/>
                   </div>
 
                   <div className="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" value="aliohmhred610" className="form-input"/>
+                    <input type="text" id="username" name="username" value="ayamohamed610" className="form-input"/>
                   </div>
 
                   <div className="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="aliohmhred610@gmail.com" className="form-input"/>
+                    <input type="email" id="email" name="email" value="ayamohamed610@gmail.com" className="form-input"/>
                   </div>
 
                   <div className="form-group">

@@ -84,7 +84,7 @@ function Navbar(){
                 </>
               ) : (
                 <>
-                  <Link to="/my-account" className="btn btn-primary btn-sm me-2">
+                  <Link to="/myaccount" className="btn btn-primary btn-sm me-2">
                     My Account
                   </Link>
                   <button

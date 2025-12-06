@@ -1,11 +1,10 @@
-/* Reset and Base Styles */
-* {
+.myaccount-page * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+.myaccount-page {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: #f8f9fa;
   color: #333;
@@ -13,7 +12,7 @@ body {
 }
 
 /* Header Styles */
-.header {
+.myaccount-page .header {
   background-color: white;
   border-bottom: 1px solid #e5e7eb;
   padding: 0 20px;
@@ -22,7 +21,7 @@ body {
   z-index: 100;
 }
 
-.header-container {
+.myaccount-page .header-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -32,56 +31,46 @@ body {
 }
 
 /* Logo Styles */
-.logo {
+.myaccount-page .logo {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.logo-icon svg {
+.myaccount-page .logo-icon svg {
   display: block;
 }
 
-.logo-text {
+.myaccount-page .logo-text {
   font-size: 24px;
   font-weight: 700;
   color: #00b4a6;
 }
 
 /* Navigation Styles */
-.nav {
+.myaccount-page .nav {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-.nav-link {
+.myaccount-page .nav-link {
   text-decoration: none;
   color: #6b7280;
   font-weight: 500;
   font-size: 16px;
-  
-  /* START: (الطلب رقم 3) 
-    إضافة padding و border شفاف 
-  */
-  padding-bottom: 5px; /* إضافة مسافة للخط السفلي */
-  border-bottom: 3px solid transparent; /* خط سفلي شفاف */
-  transition: color 0.2s ease, border-color 0.2s ease; /* تحديث الـ transition */
-  /* END: (الطلب رقم 3) */
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-link:hover {
+.myaccount-page .nav-link:hover {
   color: #00b4a6;
-  
-  /* START: (الطلب رقم 3) 
-    إظهار الخط السفلي الأخضر عند الـ hover
-  */
   border-bottom-color: #00b4a6;
-  /* END: (الطلب رقم 3) */
 }
 
 /* Account Button */
-.account-btn {
+.myaccount-page .account-btn {
   background-color: #00b4a6;
   color: white;
   border: none;
@@ -93,16 +82,16 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.account-btn:hover {
+.myaccount-page .account-btn:hover {
   background-color: #009688;
 }
 
-/* Main Content Layout */
-.main-content {
+/* Main Content */
+.myaccount-page .main-content {
   padding: 32px 20px;
 }
 
-.content-container {
+.myaccount-page .content-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -110,8 +99,8 @@ body {
   gap: 32px;
 }
 
-/* Sidebar Styles */
-.sidebar {
+/* Sidebar */
+.myaccount-page .sidebar {
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -119,12 +108,12 @@ body {
   height: fit-content;
 }
 
-.sidebar-nav {
+.myaccount-page .sidebar-nav {
   display: flex;
   flex-direction: column;
 }
 
-.sidebar-link {
+.myaccount-page .sidebar-link {
   display: block;
   padding: 12px 24px;
   text-decoration: none;
@@ -135,59 +124,59 @@ body {
   transition: all 0.2s ease;
 }
 
-.sidebar-link:hover {
+.myaccount-page .sidebar-link:hover {
   background-color: #f8f9fa;
   color: #00b4a6;
 }
 
-.sidebar-link.active {
+.myaccount-page .sidebar-link.active {
   color: #00b4a6;
   border-left-color: #00b4a6;
   background-color: #f0fdfc;
 }
 
-.sidebar-link.sign-out {
+.myaccount-page .sidebar-link.sign-out {
   color: #dc2626;
   margin-top: 16px;
   border-top: 1px solid #e5e7eb;
   padding-top: 24px;
 }
 
-.sidebar-link.sign-out:hover {
+.myaccount-page .sidebar-link.sign-out:hover {
   background-color: #fef2f2;
   color: #dc2626;
   border-left-color: #dc2626;
 }
 
 /* Content Area */
-.content-area {
+.myaccount-page .content-area {
   min-height: 600px;
 }
 
-.content-section {
+.myaccount-page .content-section {
   display: none;
 }
 
-.content-section.active {
+.myaccount-page .content-section.active {
   display: block;
 }
 
-.content-card {
+.myaccount-page .content-card {
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 32px;
 }
 
-.section-title {
+.myaccount-page .section-title {
   font-size: 24px;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 24px;
 }
 
-/* Profile Picture Section */
-.profile-picture-section {
+/* Profile Picture */
+.myaccount-page .profile-picture-section {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -196,7 +185,7 @@ body {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.profile-picture {
+.myaccount-page .profile-picture {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -204,45 +193,45 @@ body {
   border: 3px solid #e5e7eb;
 }
 
-.profile-picture img {
+.myaccount-page .profile-picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.profile-picture-info h3 {
+.myaccount-page .profile-picture-info h3 {
   font-size: 18px;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 12px;
 }
 
-.profile-picture-actions {
+.myaccount-page .profile-picture-actions {
   display: flex;
   gap: 12px;
 }
 
-/* Form Styles */
-.profile-form {
+/* Form */
+.myaccount-page .profile-form {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.form-group {
+.myaccount-page .form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.form-group label {
+.myaccount-page .form-group label {
   font-weight: 500;
   color: #374151;
   font-size: 14px;
 }
 
-.form-input,
-.form-textarea {
+.myaccount-page .form-input,
+.myaccount-page .form-textarea {
   padding: 12px 16px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
@@ -251,20 +240,20 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-input:focus,
-.form-textarea:focus {
+.myaccount-page .form-input:focus,
+.myaccount-page .form-textarea:focus {
   outline: none;
   border-color: #00b4a6;
   box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.1);
 }
 
-.form-textarea {
+.myaccount-page .form-textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-/* Button Styles */
-.btn-primary {
+/* Buttons */
+.myaccount-page .btn-primary {
   background-color: #00b4a6;
   color: white;
   border: none;
@@ -276,11 +265,11 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.btn-primary:hover {
+.myaccount-page .btn-primary:hover {
   background-color: #009688;
 }
 
-.btn-secondary {
+.myaccount-page .btn-secondary {
   background-color: transparent;
   color: #6b7280;
   border: none;
@@ -292,11 +281,11 @@ body {
   transition: color 0.2s ease;
 }
 
-.btn-secondary:hover {
+.myaccount-page .btn-secondary:hover {
   color: #374151;
 }
 
-.btn-cancel {
+.myaccount-page .btn-cancel {
   background-color: white;
   color: #6b7280;
   border: 1px solid #d1d5db;
@@ -308,66 +297,64 @@ body {
   transition: all 0.2s ease;
 }
 
-.btn-cancel:hover {
+.myaccount-page .btn-cancel:hover {
   background-color: #f9fafb;
   border-color: #9ca3af;
 }
 
-.form-actions {
+.myaccount-page .form-actions {
   display: flex;
   gap: 12px;
   margin-top: 8px;
 }
 
-/* (الطلب رقم 2) 
-  الكود الخاص بالاستجابة موجود هنا بالفعل ويعمل بكفاءة
-*/
+/* Responsive */
 @media (max-width: 768px) {
-  .header-container {
+  .myaccount-page .header-container {
     flex-direction: column;
     height: auto;
     padding: 16px 0;
     gap: 16px;
   }
 
-  .nav {
+  .myaccount-page .nav {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .nav-link {
+  .myaccount-page .nav-link {
     font-size: 14px;
   }
 
-  .content-container {
+  .myaccount-page .content-container {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .sidebar {
+  .myaccount-page .sidebar {
     order: -1;
   }
 
-  .sidebar-nav {
+  .myaccount-page .sidebar-nav {
     flex-direction: row;
     overflow-x: auto;
     padding: 0 8px;
   }
 
-  .sidebar-link {
+  .myaccount-page .sidebar-link {
     white-space: nowrap;
     border-left: none;
     border-bottom: 3px solid transparent;
     padding: 12px 16px;
   }
 
-  .sidebar-link.active {
+  .myaccount-page .sidebar-link.active {
     border-left: none;
     border-bottom-color: #00b4a6;
   }
 
-  .sidebar-link.sign-out {
+  .myaccount-page .sidebar-link.sign-out {
     margin-top: 0;
     border-top: none;
     padding-top: 12px;
@@ -376,60 +363,60 @@ body {
     padding-left: 16px;
   }
 
-  .profile-picture-section {
+  .myaccount-page .profile-picture-section {
     flex-direction: column;
     text-align: center;
     gap: 16px;
   }
 
-  .profile-picture-actions {
+  .myaccount-page .profile-picture-actions {
     justify-content: center;
   }
 
-  .form-actions {
+  .myaccount-page .form-actions {
     flex-direction: column;
   }
 
-  .main-content {
+  .myaccount-page .main-content {
     padding: 20px 16px;
   }
 
-  .content-card {
+  .myaccount-page .content-card {
     padding: 24px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .logo-text {
+  .myaccount-page .logo-text {
     font-size: 20px;
   }
 
-  .nav {
+  .myaccount-page .nav {
     gap: 16px;
   }
 
-  .nav-link {
+  .myaccount-page .nav-link {
     font-size: 13px;
   }
 
-  .account-btn {
+  .myaccount-page .account-btn {
     padding: 8px 16px;
     font-size: 13px;
   }
 
-  .profile-picture {
+  .myaccount-page .profile-picture {
     width: 80px;
     height: 80px;
   }
 
-  .profile-picture-actions {
+  .myaccount-page .profile-picture-actions {
     flex-direction: column;
     width: 100%;
   }
 
-  .btn-primary,
-  .btn-secondary,
-  .btn-cancel {
+  .myaccount-page .btn-primary,
+  .myaccount-page .btn-secondary,
+  .myaccount-page .btn-cancel {
     width: 100%;
     justify-content: center;
   }
