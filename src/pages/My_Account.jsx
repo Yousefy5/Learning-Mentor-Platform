@@ -1,0 +1,172 @@
+import { Link } from 'react-router-dom';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "../styles/My_Account.css";
+
+function My_Account(){
+   return (
+   <>
+     <div className="Container">
+     <div className="row">
+      
+       <main className="main-content">
+        <div className="content-container">
+          <aside className="sidebar">
+            <nav className="sidebar-nav">
+              <Link to="#" className="sidebar-link active" data-section="profile">Profile</Link>
+              <Link to="#" className="sidebar-link" data-section="security">Security</Link>
+              <Link to="#" className="sidebar-link" data-section="notifications">Notifications</Link>
+              <Link to="#" className="sidebar-link" data-section="billing">Billing</Link>
+              <Link to="#" className="sidebar-link sign-out" data-section="signout">Sign Out</Link>
+            </nav>
+          </aside>
+
+          <section className="content-area">
+            <div id="profile-section" className="content-section active">
+              <div className="content-card">
+                <h2 className="section-title">Profile Settings</h2>
+
+                <div className="profile-picture-section">
+                  <div className="profile-picture">
+                    <img 
+                      src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                      alt="Profile Picture"
+                      onerror="this.src='https://dummyimage.com/100x100/e5e7eb/666666?text=Profile'"
+                    />
+                  </div>
+                  <div className="profile-picture-info">
+                    <h3>Profile Photo</h3>
+                    <div className="profile-picture-actions">
+                      <button className="btn-primary">Upload new photo</button>
+                      <button className="btn-secondary">Remove</button>
+                    </div>
+                  </div>
+                </div>
+
+                <form className="profile-form">
+                  <div className="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" value="Ali Ohmhred" className="form-input"/>
+                  </div>
+
+                  <div className="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="aliohmhred610" className="form-input"/>
+                  </div>
+
+                  <div className="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="aliohmhred610@gmail.com" className="form-input"/>
+                  </div>
+
+                  <div className="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="4" className="form-textarea" placeholder="Tell us about yourself...">Passionate learner and educator focused on continuous improvement and knowledge sharing.</textarea>
+                  </div>
+
+                  <div className="form-actions">
+                    <button type="submit" className="btn-primary">Save Changes</button>
+                    <button type="button" className="btn-cancel">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div id="security-section" className="content-section">
+  <div className="content-card">
+    <h2 className="section-title">Security Settings</h2>
+
+    <div className="form-group">
+      <label>Current Password</label>
+      <input type="password" className="form-input" placeholder="Enter current password" />
+    </div>
+
+    <div className="form-group">
+      <label>New Password</label>
+      <input type="password" className="form-input" placeholder="Enter new password" />
+    </div>
+
+    <div className="form-group">
+      <label>Confirm New Password</label>
+      <input type="password" className="form-input" placeholder="Re-enter new password" />
+    </div>
+
+    <div className="form-actions">
+      <button className="btn-primary">Update Password</button>
+    </div>
+
+    <hr style={{ margin: "30px 0" }} />
+
+    <h3>Two-Factor Authentication (2FA)</h3>
+    <p>Increase account security by enabling 2FA.</p>
+    <button className="btn-secondary">Enable 2FA</button>
+  </div>
+</div>
+
+
+            <div id="notifications-section" className="content-section">
+  <div className="content-card">
+    <h2 className="section-title">Notification Preferences</h2>
+
+    <div className="form-group">
+      <label>Email Notifications</label>
+      <select className="form-input">
+        <option>All Notifications</option>
+        <option>Only Important</option>
+        <option>Disable Email Notifications</option>
+      </select>
+    </div>
+
+    <div className="form-group">
+      <label>SMS Alerts</label>
+      <select className="form-input">
+        <option>Enabled</option>
+        <option>Disabled</option>
+      </select>
+    </div>
+
+    <div className="form-group">
+      <label>Push Notifications</label>
+      <select className="form-input">
+        <option>Enabled</option>
+        <option>Disabled</option>
+      </select>
+    </div>
+
+    <div className="form-actions">
+      <button className="btn-primary">Save Preferences</button>
+    </div>
+  </div>
+</div>
+
+
+            <div id="billing-section" className="content-section">
+  <div className="content-card">
+    <h2 className="section-title">Billing & Subscription</h2>
+
+    <h3>Current Plan</h3>
+    <p><strong>Premium Plan</strong> — $9.99/month</p>
+
+    <button className="btn-secondary" style={{ marginBottom: "25px" }}>
+      Upgrade / Manage Subscription
+    </button>
+
+    <hr style={{ margin: "30px 0" }} />
+
+    <h3>Payment Method</h3>
+    <p>Visa •••• 8421 — expires 08/28</p>
+    <button className="btn-primary">Update Payment Method</button>
+  </div>
+</div>
+
+          </section>
+        </div>
+      </main>
+     </div>
+  </div>
+<script src="../../services/My_Account.js"></script>   </>
+  )
+}
+
+export default My_Account;
+
