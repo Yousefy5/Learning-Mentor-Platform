@@ -421,3 +421,30 @@
     justify-content: center;
   }
 }
+
+.toast-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  animation: fadeInOut 2.5s ease;
+  z-index: 9999;
+}
+
+.toast-message.success {
+  background: #009688;
+}
+
+.toast-message.error {
+  background: #dc3545;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
