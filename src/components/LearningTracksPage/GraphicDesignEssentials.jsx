@@ -1,13 +1,42 @@
 import TrackIntroduction from "./components/TrackIntroduction";
 import ProgressBar from "./components/ProgressBar";
 import ModuleCards from "./components/ModuleCards";
+import { useEffect, useState } from "react";
 import { themes } from "./themes";
 function GraphicDesignEssentials() {
+  const [modules, setModules] = useState([]);
+  const [tracks, setTracks] = useState([]);
+
+  useEffect(() => {
+
+    fetch("https://x8ki-letl-twmt.n7.xano.io/api:Y-s1sFXN/learning_tracks")
+      .then(res => res.json())
+      .then(data => {
+      const grahpicTracks = data.find(item => item.id === 3); //To take only data from python roadmap in the database
+      setTracks(grahpicTracks);
+          })
+      .catch(err => console.error(err));
+
+  fetch("https://x8ki-letl-twmt.n7.xano.io/api:fsvFqTVK/courses")
+    .then(res => res.json())
+    .then(data => {
+      const filtered = data.filter(item => item.roadmap_id === 3)
+      .sort((a, b) => a.id - b.id);
+
+      const chunked = [];
+      for (let i = 0; i < filtered.length; i += 3) {
+        chunked.push(filtered.slice(i, i + 3));
+      }
+
+      setModules(chunked);
+    });
+}, []);
+
   return (
     <>
-      {/* ===== Hero Section (Keep styles exactly as they are) ===== */}
-      <div className="roadmap-page">
-        <section
+           {/* ===== Hero Section (Keep styles exactly as they are) ===== */}
+       <div className="roadmap-page">
+         <section
           className="hero-section py-5"
           style={{
             backgroundColor: "#ff6f61",
@@ -18,7 +47,7 @@ function GraphicDesignEssentials() {
           <div className="container d-flex flex-column flex-lg-row align-items-center justify-content-between text-white text-start">
             {/* Left Content */}
             <div className="col-lg-6 mb-4 mb-lg-0 ps-lg-5 pe-lg-3">
-              <h2 className="fw-bold">Graphic Design Essentials</h2>
+              <h2 className="fw-bold">{tracks.title}</h2>
               <p className="mb-3">
                 Start your creative journey to becoming a professional graphic
                 designer. This roadmap covers the essential principles, tools,
@@ -27,22 +56,7 @@ function GraphicDesignEssentials() {
               </p>
 
               {/* Progress Bar */}
-              <div className="d-flex align-items-center gap-2 mt-2">
-                <div
-                  className="progress flex-grow-1"
-                  style={{
-                    height: "8px",
-                    backgroundColor: "rgba(255,255,255,0.3)",
-                  }}
-                >
-                  <div
-                    className="progress-bar"
-                    style={{ width: "75%", background: "#9554a1" }}
-                  ></div>
-                </div>
-                <span className="fw-semibold text-white">75%</span>
               </div>
-            </div>
 
             {/* Right Image */}
             <div className="col-lg-5 text-center">
@@ -56,52 +70,20 @@ function GraphicDesignEssentials() {
           </div>
         </section>
       </div>
-      {/* ===== Module 1 ===== */}
+      {modules.map((module, index) => (
       <ModuleCards
+        key={index}
         theme={themes.design}
-        ModuleTitle="Module 1: Design Core Foundations"
-        title1="Introduction to Graphic Design"
-        title2="Elements & Principles of Design"
-        title3="Understanding Composition & Layout"
-        paragraphText1="Discover what graphic design is and how creativity meets purpose."
-        paragraphText2="Learn balance, contrast, alignment, and rhythm in visual design."
-        paragraphText3="Master layout techniques for professional and eye-catching designs."
-        photo1="../public/assests/Imgs/Graphic/Edit photo-rafiki.svg"
-        photo2="../public/assests/Imgs/Graphic/Design inspiration-amico.svg"
-        photo3="../public/assests/Imgs/Graphic/Design inspiration-pana.svg"
+        ModuleTitle={`Module ${index + 1}`}
+        items={module.map(item => ({
+          title: item.title,
+          description: item.description,
+          photo: item.ImgPath
+        }))}
       />
-
-      {/* ===== Module 2 ===== */}
-      <ModuleCards
-        theme={themes.design}
-        ModuleTitle="Module 2: Tools & Practical Skills"
-        title1="Introduction to Adobe Photoshop"
-        title2="Getting Started with Adobe Illustrator"
-        title3="Working with Canva & Figma for Design Projects"
-        paragraphText1="Learn the basics of photo editing, layers, and adjustments."
-        paragraphText2="Design scalable vector graphics for logos and illustrations."
-        paragraphText3="Use modern, fast tools to create collaborative design projects."
-        photo1="../public/assests/Imgs/Graphic/Edit photo-amico.svg"
-        photo2="../public/assests/Imgs/Graphic/Designer life-pana.svg"
-        photo3="../public/assests/Imgs/Graphic/Creation process-bro.svg"
-      />
-
-      {/* ===== Module 3 ===== */}
-      <ModuleCards
-        theme={themes.design}
-        ModuleTitle="Module 3: Visual Identity & Branding"
-        title1="Introduction to Branding"
-        title2="Logo Design Principles"
-        title3="Color Psychology & Brand Aesthetics"
-        paragraphText1="Learn how brands create visual stories through design."
-        paragraphText2="Craft memorable logos that reflect identity and purpose."
-        paragraphText3="Understand how color impacts emotion and brand perception."
-        photo1="../public/assests/Imgs/Graphic/Landing page-amico.svg"
-        photo2="../public/assests/Imgs/Graphic/Artist-pana.svg"
-        photo3="../public/assests/Imgs/Graphic/Design community-pana.svg"
-      />
-    </>
-  );
-}
+)
+)}
+</>
+)}
 
 export default GraphicDesignEssentials;

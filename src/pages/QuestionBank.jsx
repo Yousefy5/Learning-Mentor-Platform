@@ -1,66 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/QuestionBank.css';
 
 const QuestionBank = () => {
-    // Dummy data for the table
-    const [questions, setQuestions] = useState([
-        {
-            id: 1,
-            question: "What is the capital of France?",
-            tags: ["Geography", "Europe"],
-            source: "World Atlas 2023",
-            difficulty: "Easy",
-            author: "Dr. Alice Smith"
-        },
-        {
-            id: 2,
-            question: "Explain the concept of 'supply and demand' in economics.",
-            tags: ["Economics", "Microeconomics"],
-            source: "Principles of Economics",
-            difficulty: "Medium",
-            author: "Prof. Bob Johnson"
-        },
-        {
-            id: 3,
-            question: "Calculate the definite integral of x^2 from 0 to 2.",
-            tags: ["Mathematics", "Calculus"],
-            source: "Calculus I Workbook",
-            difficulty: "Hard",
-            author: "Ms. Carol White"
-        },
-        {
-            id: 4,
-            question: "Who painted the Mona Lisa?",
-            tags: ["Art History", "Renaissance"],
-            source: "Art History Review",
-            difficulty: "Easy",
-            author: "Dr. Alice Smith"
-        },
-        {
-            id: 5,
-            question: "Describe the process of photosynthesis.",
-            tags: ["Biology", "Botany"],
-            source: "Biology for Dummies",
-            difficulty: "Medium",
-            author: "Prof. Bob Johnson"
-        },
-        {
-            id: 6,
-            question: "What are the primary colors?",
-            tags: ["Art Basics"],
-            source: "Color Theory Guide",
-            difficulty: "Easy",
-            author: "Ms. Carol White"
-        },
-        {
-            id: 7,
-            question: "List three common programming paradigms.",
-            tags: ["Computer Science", "Programming"],
-            source: "Introduction to CS",
-            difficulty: "Medium",
-            author: "Dr. Alice Smith"
-        }
-    ]);
+
+    
+    const handleDelete = (id) => {
+
+  fetch(`https://x8ki-letl-twmt.n7.xano.io/api:-R5f3gd8/quizzes/${id}`, {
+    method: 'DELETE',
+  })
+  .then(res => {
+    if (!res.ok) throw new Error("Failed to delete question");
+    setQuestions(prev => prev.filter(q => q.id !== id));
+  })
+  .catch(err => console.error(err));
+};
+
+const handleEdit = (updatedQuestion) => {
+  fetch(`https://your-api-endpoint.com/questions/${updatedQuestion.id}`, {
+    method: 'PUT', 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(updatedQuestion)
+  })
+  .then(res => res.json())
+  .then(data => {
+    setQuestions(prev => prev.map(q => q.id === data.id ? data : q));
+  })
+  .catch(err => console.error(err));
+};
+
+
+
+const [questions, setQuestions] = useState([]);
+const [setLoading] = useState(true);
+
+
+useEffect(() => {
+    fetch("https://x8ki-letl-twmt.n7.xano.io/api:-R5f3gd8/quizzes") 
+        .then(res => res.json())
+        .then(data => {
+            const formatted = data.map(q => ({
+                id: q.id,
+                question: q.question,
+                tags: ["Programming"], 
+                source: "",
+                difficulty: q.difficulty || "Unknown",
+                author: q.author || "Unknown"
+            }));
+            setQuestions(formatted);
+            setLoading(false);
+        })
+        .catch(err => {
+            console.error(err);
+            setLoading(false);
+        });
+}, []);
+
 
     return (
         <div className="question-bank-page">
@@ -124,7 +121,7 @@ const QuestionBank = () => {
                                                 <span key={index} className="badge badge-tag">{tag}</span>
                                             ))}
                                         </td>
-                                        <td>{q.source}</td>
+                                        <td>{questions.source}</td>
                                         <td>
                                             <span className={`badge badge-difficulty difficulty-${q.difficulty.toLowerCase()}`}>
                                                 {q.difficulty}
@@ -132,10 +129,10 @@ const QuestionBank = () => {
                                         </td>
                                         <td>{q.author}</td>
                                         <td>
-                                            <button className="action-btn" title="Edit">
-                                                <i className="bi bi-pencil-square"></i>
-                                            </button>
-                                            <button className="action-btn delete" title="Delete">
+                                                <button className="action-btn" title="Edit" onClick={() => handleEdit(q)}>
+                                                    <i className="bi bi-pencil-square"></i>
+                                                </button>
+                                                <button className="action-btn delete" title="Delete" onClick={() => handleDelete(q.id)}>
                                                 <i className="bi bi-trash"></i>
                                             </button>
                                         </td>

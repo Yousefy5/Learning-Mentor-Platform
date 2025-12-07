@@ -1,61 +1,60 @@
 import TrackIntroduction from "./components/TrackIntroduction.jsx";
 import ModuleCards from "./components/ModuleCards.jsx";
 import ProgressBar from "./components/ProgressBar.jsx";
+import { useEffect, useState } from "react";
 import { themes } from "./themes.js";
 
 function PythonFundamentalsRoadmap() {
+  
+  const [modules, setModules] = useState([]);
+  const [tracks, setTracks] = useState([]);
+
+  useEffect(() => {
+
+    fetch("https://x8ki-letl-twmt.n7.xano.io/api:Y-s1sFXN/learning_tracks")
+      .then(res => res.json())
+      .then(data => {
+      const pythonTrack = data.find(item => item.id === 5); //To take only data from python roadmap in the database
+      setTracks(pythonTrack);
+          })
+      .catch(err => console.error(err));
+
+  fetch("https://x8ki-letl-twmt.n7.xano.io/api:fsvFqTVK/courses")
+    .then(res => res.json())
+    .then(data => {
+      const filtered = data.filter(item => item.roadmap_id === 1)
+      .sort((a, b) => a.id - b.id);
+
+      const chunked = [];
+      for (let i = 0; i < filtered.length; i += 3) {
+        chunked.push(filtered.slice(i, i + 3));
+      }
+
+      setModules(chunked);
+    });
+}, []);
+
   return (
     <>
-      <TrackIntroduction
-        TrackTitle="Python Fundamentals Roadmap"
-        TrackDescription="Embark on your journey to becoming a proficient Python developer. This roadmap covers essential Python programming skills, from core syntax and logic to data structures and real-world projects."
-      />
-
-      <ProgressBar />
-
+      {tracks && (
+  <TrackIntroduction
+    TrackTitle={tracks.title}
+    TrackDescription={tracks.description}
+  />
+)}
+      {modules.map((module, index) => (
       <ModuleCards
+        key={index}
         theme={themes.python}
-        ModuleTitle="Module 1: Core Python Essentials"
-        title1="Introduction to Python & Setup"
-        title2="Variables, Data Types & Operators"
-        title3="Conditions & Loops"
-        paragraphText1="Learn fundamentals of Python and how to set up the environment."
-        paragraphText2="Understand variables, data types, and operators in Python."
-        paragraphText3="Master conditional statements and looping techniques."
-        photo1="/assests/Imgs/Python/Introduction to Python & Setup.svg"
-        photo2="/assests/Imgs/Python/Variables, Data Types & Operators.svg"
-        photo3="/assests/Imgs/Python/Conditions & Loops.svg"
+        ModuleTitle={`Module ${index + 1}`}
+        items={module.map(item => ({
+          title: item.title,
+          description: item.description,
+          photo: item.ImgPath
+        }))}
       />
-
-      <ModuleCards
-        theme={themes.python}
-        ModuleTitle="Module 2: Working with Data"
-        title1="Functions & Modules"
-        title2="Data Structures"
-        title3="File Handling"
-        paragraphText1="Learn how to create functions and organize code with modules."
-        paragraphText2="Explore lists, tuples, sets, dictionaries, and their use cases."
-        paragraphText3="Work with files to read, write, and manage data."
-        photo1="/assests/Imgs/Python/Functions.svg"
-        photo2="/assests/Imgs/Python/Data Structures.svg"
-        photo3="/assests/Imgs/Python/File Handling.svg"
-      />
-
-      <ModuleCards
-        theme={themes.python}
-        ModuleTitle="Module 3: Object-Oriented Programming"
-        title1="Classes & Objects"
-        title2="Inheritance & Polymorphism"
-        title3="Abstraction & Encapsulation"
-        paragraphText1="Understand the concept of classes and how objects are created."
-        paragraphText2="Learn how inheritance and polymorphism help build scalable programs."
-        paragraphText3="Master abstraction and encapsulation to write clean and secure code."
-        photo1="/assests/Imgs/Python/Classes & Objects.svg"
-        photo2="/assests/Imgs/Python/Inheritance & Polymorphism.svg"
-        photo3="/assests/Imgs/Python/Abstraction & Encapsulation.svg"
-      />
-    </>
-  );
-}
-
+)
+)}
+</>
+)}
 export default PythonFundamentalsRoadmap;

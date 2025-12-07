@@ -32,7 +32,7 @@ function Main({ city, category }) {
     const [cardsData, setCardsData] = useState([]);
 
     useEffect(() => {
-        fetch('/CentersData.json')
+        fetch("https://x8ki-letl-twmt.n7.xano.io/api:Hf5cEoaw/offline_centres")
             .then(response => response.json())
             .then(data => setCardsData(data))
             .catch(err => console.error("Error", err));
@@ -41,7 +41,7 @@ function Main({ city, category }) {
     const filtered = cardsData.filter(card => {
         const cityMatch = city ? card.city === city : true;
         const categoryMatch = category 
-            ? (card.btn1 === category || card.btn2 === category)
+            ? (card.category[0] === category || card.category[1] === category)
             : true;
 
         return cityMatch && categoryMatch;
@@ -60,12 +60,12 @@ function Main({ city, category }) {
         <div className="row g-4">
             {filtered.map(card => (
                 <Cards  
-                    img={card.img} 
+                    img={card.ImgPath} 
                     title={card.title} 
                     city={card.city}
-                    discription={card.discription} 
-                    btn1={card.btn1} 
-                    btn2={card.btn2}
+                    discription={card.address} 
+                    btn1={card.category[0]} 
+                    btn2={card.category[1]}
                     location={card.location}
                 />
             ))}
