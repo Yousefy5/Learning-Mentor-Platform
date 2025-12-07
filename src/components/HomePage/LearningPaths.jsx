@@ -1,5 +1,5 @@
-import './HomeStyles/LearningPaths.css'
-import { Link } from 'react-router-dom';
+import './HomeStyles/LearningPaths.css';
+import { Link } from "react-router-dom";
 
 function LearningPaths() {
   return (
@@ -163,7 +163,7 @@ function LearningPaths() {
                     </div>
                     <div>
                       <h5 className="card-title mb-1">
-                        Advanced Data Analysis with Python
+                        Data Analysis with Python
                       </h5>
                       <p className="card-text text-secondary small mb-3">
                         Transform raw data into actionable insights using

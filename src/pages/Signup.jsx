@@ -1,12 +1,17 @@
 import '../styles/Signup.css';
 function Signup() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        localStorage.setItem("user", "true");
+        window.location.reload();
+    };
     return(
         <div className="container d-flex justify-content-center align-items-center py-5">
         <div className="card p-4 shadow-sm">
             <div className="card-body">
                 <h2 className="card-title text-center">Create Your Account</h2>
                 <p className="card-text text-center text-muted">Unlock a world of knowledge and quizzes.</p>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="fullname" className="form-label">Full Name</label>
                         <input type="text" className="form-control" id="fullname" placeholder="John Doe"/>

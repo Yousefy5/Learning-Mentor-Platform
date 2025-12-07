@@ -1,6 +1,17 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { useState } from "react";
 import '../styles/navbar.css'
 function Navbar(){
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem("user") ? true : false;
+  });
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setIsLoggedIn(false);
+    navigate("/");
+  };
     return(
 <>        
 {/* <!--Navbar--> */}
@@ -54,20 +65,36 @@ function Navbar(){
             <Link to="/signup" className="btn btn-primary btn-sm">Sign Up</Link>
           </div> */}
           <div className="d-flex ms-lg-3 mt-lg-0">
-            <button
-              type="button"
-              className="btn btn-outline-primary btn-sm me-2"
-              data-bs-toggle="modal"
-              data-bs-target="#loginModal">
-              Log in
-            </button>
-            <button
-              type="button"
-              className="btn btn-primary btn-sm btn1"
-              data-bs-toggle="modal"
-              data-bs-target="#signupModal">
-              Sign Up
-            </button>
+            {!isLoggedIn ? (
+                <>
+                  <button
+                    type="button"
+                    className="btn btn-outline-primary btn-sm me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
+                    Log in
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signupModal">
+                    Sign Up
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link to="/myaccount" className="btn btn-primary btn-sm me-2">
+                    My Account
+                  </Link>
+                  <button
+                    className="btn btn-outline-danger btn-sm"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </>
+              )}
           </div>
     </div>
   </div>
