@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
 import "../styles/My_Account.css";
 
 
@@ -15,10 +16,8 @@ function My_Account(){
           <aside className="sidebar">
             <nav className="sidebar-nav">
               <Link to="#" className="sidebar-link active" data-section="profile">Profile</Link>
-              <Link to="#" className="sidebar-link" data-section="security">Security</Link>
-              <Link to="#" className="sidebar-link" data-section="notifications">Notifications</Link>
-              <Link to="#" className="sidebar-link" data-section="billing">Billing</Link>
-              <Link to="#" className="sidebar-link sign-out" data-section="signout">Sign Out</Link>
+              
+              <Link to="#" className="sidebar-link sign-out" data-section="signout">Logout</Link>
             </nav>
           </aside>
 
@@ -73,34 +72,12 @@ function My_Account(){
               </div>
             </div>
 
-           <div id="security-section" class="content-section">
-          <div className="content-card">
-            <h2 className="section-title">Security Settings</h2>
-            <p>Manage your password and security preferences.</p>
-          </div>
-        </div>
-
-
- <div id="notifications-section" class="content-section">
-          <div className="content-card">
-            <h2 className="section-title">Notification Preferences</h2>
-            <p>Control how and when you receive notifications.</p>
-          </div>
-        </div>
-
-   <div id="billing-section" class="content-section">
-          <div className="content-card">
-            <h2 className="section-title">Billing & Subscription</h2>
-            <p>Manage your subscription and payment methods.</p>
-          </div>
-        </div>
-
           </section>
         </div>
       </main>
      </div>
   </div>
-<script src="../../services/My_Account.js"></script>   </>
+  </>
   )
 }
 
