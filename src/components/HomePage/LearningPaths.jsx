@@ -1,4 +1,5 @@
-import './HomeStyles/LearningPaths.css'
+import './HomeStyles/LearningPaths.css';
+import { Link } from "react-router-dom";
 
 function LearningPaths() {
   return (
@@ -11,12 +12,12 @@ function LearningPaths() {
               Dive into expertly curated roadmaps designed to help you master
               new skills and advance your career.
             </p>
-            <a
-              href="page2.html"
+            <Link
+              to="/learning-tracks"
               className="btn btn-outline-secondary rounded-pill px-4"
             >
               View All Tracks
-            </a>
+            </Link>
           </div>
 
           <div className="row g-4 mt-1">
@@ -37,9 +38,9 @@ function LearningPaths() {
                         Start your coding journey with fundamental concepts and
                         practical exercises.
                       </p>
-                      <a href="#" className="btn btn-sm btn-outline-secondary">
+                      <Link to="/learning-tracks/programming-fundamentals" className="btn btn-sm btn-outline-secondary">
                         Start Learning
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -64,9 +65,9 @@ function LearningPaths() {
                         Unleash your creativity with comprehensive guides on
                         standard design software.
                       </p>
-                      <a href="#" className="btn btn-sm btn-outline-secondary">
+                      <Link to="/learning-tracks/graphic-design-essentials" className="btn btn-sm btn-outline-secondary">
                         Start Learning
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -90,9 +91,9 @@ function LearningPaths() {
                         Boost your efficiency with expert techniques and
                         essential productivity tools.
                       </p>
-                      <a href="#" className="btn btn-sm btn-outline-secondary">
+                      <Link to="/learning-tracks/productivity-tools" className="btn btn-sm btn-outline-secondary">
                         Start Learning
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -116,9 +117,9 @@ function LearningPaths() {
                         Build interactive websites from scratch using HTML, CSS,
                         and JavaScript.
                       </p>
-                      <a href="#" className="btn btn-sm btn-outline-secondary">
+                      <Link to="/learning-tracks/programming-fundamentals/web-development" className="btn btn-sm btn-outline-secondary">
                         Start Learning
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -142,9 +143,9 @@ function LearningPaths() {
                         Learn to create intuitive and aesthetically pleasing
                         user interfaces and experiences.
                       </p>
-                      <a href="#" className="btn btn-sm btn-outline-secondary">
+                      <Link to="/learning-tracks/graphic-design-essentials" className="btn btn-sm btn-outline-secondary">
                         Start Learning
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -162,15 +163,15 @@ function LearningPaths() {
                     </div>
                     <div>
                       <h5 className="card-title mb-1">
-                        Advanced Data Analysis with Python
+                        Data Analysis with Python
                       </h5>
                       <p className="card-text text-secondary small mb-3">
                         Transform raw data into actionable insights using
                         powerful Python libraries.
                       </p>
-                      <a href="#" className="btn btn-sm btn-outline-secondary">
+                      <Link to="/learning-tracks/programming-fundamentals/python-fundamentals" className="btn btn-sm btn-outline-secondary">
                         Start Learning
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
