@@ -1,8 +1,7 @@
 import Header from "../components/DashboardPage/Header";
-import Main from "../components/DashboardPage/Main";
-
+import Main from "../components/DashboardPage/Main"
 import '../styles/style2.css';
-import '../styles/Dash.css'
+import '../styles/Dash.css';
 
 function Dashboard() {
   return (

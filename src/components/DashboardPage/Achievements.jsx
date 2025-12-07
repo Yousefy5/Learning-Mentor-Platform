@@ -1,4 +1,5 @@
-function Achievements({ title, icon, numOfThing, motive, button }) {
+import { Link } from "react-router-dom";
+function Achievements({ title, icon, numOfThing, motive, button , link}) {
   return (
     <div className="col-12 col-md-6 col-lg-3">
       <div className="p-3 rounded text-start h-100">
@@ -15,9 +16,11 @@ function Achievements({ title, icon, numOfThing, motive, button }) {
 
  
         {button && (
-          <button className="btn btn-coloro2 px-5 border btn-sm btn-hov">
+          <Link 
+            to={link || "#"} 
+            className="btn btn-coloro2 px-5 border btn-sm btn-hov">
             {button}
-          </button>
+          </Link>
         )}
       </div>
     </div>

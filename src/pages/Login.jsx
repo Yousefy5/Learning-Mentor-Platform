@@ -1,12 +1,17 @@
 import '../styles/Login.css';
 function Login() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        localStorage.setItem("user", "true");
+        window.location.reload();
+    };
     return(
         <div className="container d-flex justify-content-center align-items-center min-vh-100">
         <div className="card p-4 shadow-sm">
             <div className="card-body">
                 <h2 className="card-title text-center">Welcome Back</h2>
                 <p className="card-text text-center text-muted">Sign in to your account to continue.</p>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">Email or Phone Number</label>
                         <input type="email" className="form-control" id="email" placeholder="name@example.com or +1234567890"/>

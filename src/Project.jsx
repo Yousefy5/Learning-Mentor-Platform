@@ -20,13 +20,14 @@ import LogIn from "./pages/Login";
 import SignUp from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Content from "./pages/Content";
+import My_Account from "./pages/My_Account";
 
 import QuestionBank from "./pages/QuestionBank";
 import AboutUs from "./pages/AboutUs";
 import Resources from "./pages/Resources";
 import Legal from "./pages/Legal";
 import ContactUs from "./pages/ContactUs";
-
+import { ProgressProvider } from "./context/ProgressContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
@@ -62,7 +63,8 @@ const routes = createBrowserRouter([
       { path: '/login', element: <LogIn /> },
       { path: '/signup', element: <SignUp /> },
       { path: "/dashboard", element: <Dashboard /> },
-      { path: "/content/:fieldId/:itemId", element: <Content /> }
+      { path: "/content/:fieldId/:itemId", element: <Content /> },
+      { path: "/myaccount", element: <My_Account/>}
     ]
   }
 ]);
@@ -70,8 +72,10 @@ const routes = createBrowserRouter([
 root.render(
   // <RouterProvider router={routes} />
   <React.StrictMode>
+  <ProgressProvider>
     <DataContext.Provider value={learningArticles}>
       <RouterProvider router={routes} />
     </DataContext.Provider>
+    </ProgressProvider>
   </React.StrictMode>
 );
