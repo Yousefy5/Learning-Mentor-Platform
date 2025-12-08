@@ -43,21 +43,21 @@ function ModuleCards({
           </div>
         </div>
 
-        <div className="row mb-5">
+        <div className="row mb-5 g-4">
           {/* === CARD 1 === */}
-          <div className="col-md-4">
+          <div className="col-md-4 col">
             <div className="card h-100">
               <img src={photo1} className="card-img-top" alt="" />
               <div className="card-body text-center">
                 <h5 className="card-title" style={{ color: theme.cardTitle }}>
                   {title1}
                 </h5>
-                <p className="card-text" style={{ color: theme.text }}>
+                <p className="card-text " style={{ color: theme.text }}>
                   {paragraphText1}
                 </p>
                 <Link
                   to={`/Content/${card1FieldId}/${card1ArticleId}`}
-                  className="btn btn-primary"
+                  className="btn btn-primary "
                   style={{ backgroundColor: theme.primary, border: "none" }}
                 >
                   View Resource

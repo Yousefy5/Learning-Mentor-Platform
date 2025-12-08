@@ -33,6 +33,50 @@ function WebDevelopmentFundamentalsRoadmap() {
   card3FieldId={1}
   card3ArticleId={2}
 />
+    <ModuleCards
+  theme={themes.default}
+  ModuleTitle="Module 2: Advanced Frontend & Interactivity"
+  
+  title1="Understanding the DOM: Document Object Model"
+  paragraphText1="Master dynamic page manipulation."
+  photo1="/assests/Imgs/page3/HTM_Course.svg"
+  card1FieldId={1}
+  card1ArticleId={8}
+  
+  title2="JavaScript Events and Interactive Web Behavior"
+  paragraphText2="Build responsive user interactions."
+  photo2="/assests/Imgs/page3/CSS_Course.svg"
+  card2FieldId={1}
+  card2ArticleId={9}
+  
+  title3="Web Performance Optimization Techniques"
+  paragraphText3="Create lightning-fast web experiences."
+  photo3="/assests/Imgs/page3/JS_Course.svg"
+  card3FieldId={1}
+  card3ArticleId={5}
+/>
+    <ModuleCards
+  theme={themes.default}
+  ModuleTitle="Module 3: Module 3: Backend & Version Control"
+  
+  title1="RESTful API Development and Integration"
+  paragraphText1="Connect frontend with powerful backends."
+  photo1="/assests/Imgs/page3/HTM_Course.svg"
+  card1FieldId={1}
+  card1ArticleId={3}
+  
+  title2="CSS Styling and Modern Layout Techniques"
+  paragraphText2="Style web pages with CSS properties."
+  photo2="/assests/Imgs/page3/CSS_Course.svg"
+  card2FieldId={1}
+  card2ArticleId={4}
+  
+  title3="Typography Principles for Digital Media"
+  paragraphText3="Design beautiful, readable interfaces."
+  photo3="/assests/Imgs/page3/JS_Course.svg"
+  card3FieldId={2}
+  card3ArticleId={15}
+/>
     </>
   );
 }
