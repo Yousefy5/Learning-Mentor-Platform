@@ -76,8 +76,8 @@ function PythonFundamentalsRoadmap() {
         title2="Ethics and Responsible AI Development"
         paragraphText2="Create professional data visualizations for presentations."
         photo2="/assests/Imgs/Python/Inheritance & Polymorphism.svg"
-        card2FieldId={5}
-        card2ArticleId={26}
+        card2FieldId={7}
+        card2ArticleId={37}
         
         title3="AI Tools and Platforms for Beginners"
         paragraphText3="Build intelligent data-driven applications."
