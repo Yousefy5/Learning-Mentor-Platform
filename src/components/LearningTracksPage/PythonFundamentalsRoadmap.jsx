@@ -16,9 +16,9 @@ function PythonFundamentalsRoadmap() {
       <ModuleCards
         theme={themes.python}
         ModuleTitle="Module 1: Core Python Essentials"
-        title1="Introduction to Python & Setup"
-        title2="Variables, Data Types & Operators"
-        title3="Conditions & Loops"
+        title1="Python Fundamentals for Data Analysis "
+        title2="Data Manipulation with Pandas Library"
+        title3="Data Visualization with Matplotlib"
         paragraphText1="Learn fundamentals of Python and how to set up the environment."
         paragraphText2="Understand variables, data types, and operators in Python."
         paragraphText3="Master conditional statements and looping techniques."
@@ -30,8 +30,8 @@ function PythonFundamentalsRoadmap() {
       <ModuleCards
         theme={themes.python}
         ModuleTitle="Module 2: Working with Data"
-        title1="Functions & Modules"
-        title2="Data Structures"
+        title1="Machine Learning Basics with Scikit-Learn"
+        title2="Statistical Analysis and Hypothesis Testing"
         title3="File Handling"
         paragraphText1="Learn how to create functions and organize code with modules."
         paragraphText2="Explore lists, tuples, sets, dictionaries, and their use cases."

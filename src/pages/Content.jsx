@@ -1,79 +1,4 @@
-// import HeroSection from '../components/DashboardPage/HeroSection'
-// import LessonContent from '../components/DashboardPage/LessonContent'
-// import { useContext } from 'react'
-// import { DataContext } from '../context/DataContext';
-// import { useParams } from 'react-router-dom'
 
-
-// function Content() {
-//     const lessons = useContext(DataContext);
-//     const { fieldId,itemId } = useParams();
-//     const targetIdF = parseInt(fieldId);
-//     const targetIdT = parseInt(itemId);
-//     const lessonField = lessons.find(lesson =>{ 
-//          return lesson.fieldId === targetIdF});
-
-//     const tagretLesson = lessonField.items.find(item =>{
-//         return item.id === targetIdT});
-
-
-//     return (
-//         <>
-//             <HeroSection titleOfHeader ={lessonField.field} titleOflesson={tagretLesson.title} />
-//             <LessonContent />
-//         </>
-//     )
-// }
-
-// export default Content; 
-// import HeroSection from '../components/DashboardPage/HeroSection'
-// import LessonContent from '../components/DashboardPage/LessonContent'
-// import { useState, useEffect } from 'react'
-// import { useParams } from 'react-router-dom'
-// import lessonsData from '../data/Data.json'
-
-// function Content() {
-//     const [lessons, setLessons] = useState([]);
-//     const [loading, setLoading] = useState(true);
-//     const { fieldId, itemId } = useParams();
-    
-//     useEffect(() => {
-//         setLessons(lessonsData.learningArticles);
-//         setLoading(false);
-//     }, []);
-
-//     if (loading) {
-//         return <div>Loading...</div>;
-//     }
-
-//     const targetIdF = parseInt(fieldId);
-//     const targetIdT = parseInt(itemId);
-    
-//     const lessonField = lessons.find(lesson => { 
-//         return lesson.fieldId === targetIdF;
-//     });
-
-//     if (!lessonField) {
-//         return <div>Field not found</div>;
-//     }
-
-//     const targetLesson = lessonField.items.find(item => {
-//         return item.id === targetIdT;
-//     });
-
-//     if (!targetLesson) {
-//         return <div>Lesson not found</div>;
-//     }
-
-//     return (
-//         <>
-//             <HeroSection titleOfHeader={lessonField.field} titleOflesson={targetLesson.title} />
-//             <LessonContent />
-//         </>
-//     )
-// }
-
-// export default Content;
 import HeroSection from '../components/DashboardPage/HeroSection'
 import LessonContent from '../components/DashboardPage/LessonContent'
 import { useState, useEffect } from 'react'
@@ -89,12 +14,13 @@ function Content() {
         const fetchData = async () => {
             try {
                 setLoading(true);
-            
+                
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 
-             
-                const data = await import('../../Data/Data.json');
-                setLessons(data.learningArticles);
+                const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:RQjla4CO/contentarticles');
+                const data = await response.json();
+                
+                setLessons(data);
                 setLoading(false);
             } catch (err) {
                 setError(err.message);
@@ -112,21 +38,20 @@ function Content() {
                 justifyContent: 'center', 
                 alignItems: 'center', 
                 height: '100vh',
-                fontSize: '24px'
+                fontSize: '24px' 
             }}>
                 <h2>Loading...</h2>
             </div>
         );
     }
 
-    
     if (error) {
         return (
             <div style={{ 
-                display: 'flex', 
+                display: 'flex',  
                 justifyContent: 'center', 
-                alignItems: 'center', 
-                height: '100vh',
+                alignItems: 'center',  
+                height: '100vh', 
                 color: 'red'
             }}>
                 <h2>Error: {error}</h2>
@@ -134,28 +59,49 @@ function Content() {
         );
     }
 
-    const targetIdF = parseInt(fieldId);
-    const targetIdT = parseInt(itemId);
+    const targetFieldId = parseInt(fieldId);
+    const targetArticleId = parseInt(itemId);
     
-    const lessonField = lessons.find(lesson => lesson.fieldId === targetIdF);
+    // جيب كل المقالات اللي ليها نفس الـ field id
+    const articlesInField = lessons.filter(lesson => lesson.contentfields_id === targetFieldId);
     
-    if (!lessonField) {
-        return <div>Field not found</div>;
+    // Debug logs
+    console.log('===== DEBUG INFO =====');
+    console.log('Target Field ID:', targetFieldId);
+    console.log('Target Article ID:', targetArticleId);
+    console.log('Total lessons from API:', lessons.length);
+    console.log('Articles in this field:', articlesInField.length);
+    console.log('Articles data:', articlesInField);
+    console.log('=====================');
+    
+    if (articlesInField.length === 0) {
+        return <div>Field not found - No articles with contentfields_id: {targetFieldId}</div>;
     }
 
-    const targetLesson = lessonField.items.find(item => item.id === targetIdT);
-
-    if (!targetLesson) {
-        return <div>Lesson not found</div>;
+    
+    let currentArticle = articlesInField.find(article => article.id === targetArticleId);
+    
+    
+    if (!currentArticle && articlesInField.length > 0) {
+        currentArticle = articlesInField[0];
+        window.history.replaceState(null, '', `/Content/${targetFieldId}/${currentArticle.id}`);
+    }
+    
+    if (!currentArticle) {
+        return <div>Article not found - No article with id: {targetArticleId}</div>;
     }
 
     return (
         <>
             <HeroSection 
-                titleOfHeader={lessonField.field} 
-                titleOflesson={targetLesson.title} 
+                titleOflesson={currentArticle.title} 
             />
-            <LessonContent />
+            <LessonContent 
+                currentArticle={currentArticle}
+                articlesInField={articlesInField}
+                targetFieldId={targetFieldId}
+                lessons={lessons}
+            />
         </>
     )
 }

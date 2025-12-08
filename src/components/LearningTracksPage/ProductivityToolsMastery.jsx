@@ -20,10 +20,6 @@ export default function ProductivityToolsMastery(){
                 Learn the best tools and techniques to boost your productivity and achieve more in less time. This practical course covers everything from time management to task automation.
               </p>
 
-              <button className="btn text-white px-4 py-2 mb-4" style={{ backgroundColor: "#00897B", borderRadius: "5px", border: "none" }}>
-                Enroll Now
-              </button>
-
               {/* Progress Bar */}
               <div className="d-flex align-items-center gap-3">
                 <div
@@ -128,29 +124,29 @@ export default function ProductivityToolsMastery(){
             {
                 title: "Module 1: Personal Productivity Essentials",
                 cards: [
-                    { title: "Introduction to Productivity Tools", img: "Graphic/Design Process-amico.svg", type: "video", duration: "1.5 hours" },
-                    { title: "Task & Time Management Basics", img: "Graphic/Design Process-amico.svg", type: "article", duration: "2 hours" },
-                    { title: "Digital Note-Taking & Organization", img: "Graphic/Design Process-amico.svg", type: "book", duration: "1.5 hours" }
+                    { title: "Introduction to Productivity Tools", img: "src/assests/Imgs/Graphic/Design Process-amico.svg", type: "video", duration: "1.5 hours",youtubeLink:"https://youtu.be/wx_wzKs2JWA?si=oGVsXz9Xm0W667As" },
+                    { title: "Task & Time Management Basics", img: "src/assests/Imgs/Graphic/Time management-pana.svg", type: "video", duration: "2 hours",youtubeLink:"https://youtu.be/iDbdXTMnOmE?si=oZpDly-Dm2WAO9X7" },
+                    { title: "Digital Note-Taking & Organization", img: "src/assests/Imgs/Graphic/Process-rafiki.svg", type: "article", duration: "1.5 hours",youtubeLink:"https://niftypm.com/blog/best-note-taking-apps/?utm_campaign=21617982616&utm_source=g&utm_medium=cpc&utm_content=&utm_term=&ad_id=710386916580%E2%80%A9&utm_term=&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=6503027811&hsa_cam=21617982616&hsa_grp=165974673309&hsa_ad=710386916580&hsa_src=g&hsa_tgt=dsa-3500001&hsa_kw=&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=21617982616&gbraid=0AAAAACydPO_350A7WHj51oy_gFU6XGaV1&gclid=CjwKCAiAxc_JBhA2EiwAFVs7XOY3E_Anhcnk4IS8n_hn3LviVKXYwPpl3d49ye15dsvZlKwCDWEU5hoC3toQAvD_BwE" }
                 ]
             },
             {
                 title: "Module 2: Collaboration & Communication Tools",
                 cards: [
-                    { title: "Google Workspace & Microsoft 365", img: "Graphic/Design Process-amico.svg", type: "video", duration: "2.5 hours" },
-                    { title: "Team Communication with Slack & Microsoft Teams", img: "Graphic/Design Process-amico.svg", type: "article", duration: "1 hour" },
-                    { title: "Project Management Platforms: Trello & Asana", img: "Graphic/Design Process-amico.svg", type: "video", duration: "3 hours" }
+                    { title: "Google Workspace & Microsoft 365", img: "src/assests/Imgs/Graphic/Process-cuate.svg", type: "video", duration: "2.5 hours",youtubeLink:"https://youtu.be/-Is_KNM9eA0?si=Qlnv8Nll5Z2Z2xil" },
+                    { title: "Team Communication with Slack & Microsoft Teams", img: "src/assests/Imgs/Graphic/Process-bro.svg", type: "video", duration: "1 hour",youtubeLink:"https://youtu.be/3dCDAxDu3oM?si=wXbaLb4LBgXvM95F" },
+                    { title: "Project Management Platforms: Trello & Asana", img: "src/assests/Imgs/Graphic/Blog post-bro.svg", type: "video", duration: "3 hours",youtubeLink:"https://youtu.be/42s_zICA3Yg?si=QXK2tlv6niPcXQ4-" }
                 ]
             },
             {
                 title: "Module 3: Automation & Workflow Optimization",
                 cards: [
-                    { title: "Introduction to Automation", img: "Graphic/Design Process-amico.svg", type: "video", duration: "1.5 hours" },
-                    { title: "Managing Focus & Distractions", img: "Graphic/Design Process-amico.svg", type: "book", duration: "2 hours" },
-                    { title: "Calendar & Scheduling Mastery", img: "Graphic/Design Process-amico.svg", type: "article", duration: "1.5 hours" }
+                    { title: "Introduction to Automation", img: "src/assests/Imgs/Graphic/Innovation-amico.svg", type: "video", duration: "1.5 hours",youtubeLink:"https://youtu.be/4PZYb86j4wg?si=sQ4UQZ3ro5hW1S3O" },
+                    { title: "Managing Focus & Distractions", img: "src/assests/Imgs/Graphic/Mind map-pana.svg", type: "video", duration: "2 hours",youtubeLink:"https://youtu.be/Hu4Yvq-g7_Y?si=7REPFPMfOoeHQ4JB" },
+                    { title: "Calendar & Scheduling Mastery", img: "src/assests/Imgs/Graphic/Time management-pana.svg", type: "article", duration: "1.5 hours",youtubeLink:"https://www.memtime.com/blog/how-to-master-calendar-time-management" }
                 ]
             }
         ].map((module, mIndex) => (
-            <section key={mIndex} className="container my-5 text-start">
+            <section key={mIndex} className="container my-5= text-start">
                 <h4 className="fw-bold mb-4 text-center">{module.title}</h4>
                 <div className="row g-4">
                     {module.cards.map((card, cIndex) => (
@@ -162,6 +158,7 @@ export default function ProductivityToolsMastery(){
                             duration={card.duration}
                             mIndex={mIndex}
                             cIndex={cIndex}
+                            btn={card.youtubeLink}
                         />
                     ))}
                 </div>
@@ -176,13 +173,13 @@ export default function ProductivityToolsMastery(){
 }
 
 
-function ModuleCard({ title, img, type, duration, mIndex, cIndex }) {
+function ModuleCard({ title, img, type, duration, mIndex, cIndex ,btn}) {
     return (
         <div className="col-md-4">
             <div className="card h-100 border-0 shadow-sm p-3">
                 <div className="card-img-top bg-light d-flex align-items-center justify-content-center mb-3" style={{ height: "180px", borderRadius: "10px" }}>
                     {/* Using a placeholder image logic or the one found */}
-                    <img src={`/assests/Imgs/${img}`} alt={title} style={{ maxHeight: "150px", maxWidth: "100%" }} />
+                    <img src={`/${img}`} alt={title} style={{ maxHeight: "150px", maxWidth: "100%" }} />
                 </div>
                 <div className="card-body p-0">
                     <div className="d-flex align-items-center mb-2 text-warning">
@@ -196,7 +193,7 @@ function ModuleCard({ title, img, type, duration, mIndex, cIndex }) {
                     </div>
                     <h5 className="card-title fw-bold mb-3" style={{ fontSize: "1rem" }}>{title}</h5>
                     <div className="d-flex justify-content-between align-items-center mt-4">
-                        <button className="btn btn-sm text-white px-3" style={{ backgroundColor: "#00897B", borderRadius: "5px",width:"fit-content",margin:"0px" }}>View Resource</button>
+                        <button className="btn btn-sm text-white px-3" onClick={() => window.open(btn, "_blank")} style={{ backgroundColor: "#00897B", borderRadius: "5px",width:"fit-content",margin:"0px" }}>View Resource</button>
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" value="" id={`check-${mIndex}-${cIndex}`} />
                             <label className="form-check-label small text-secondary" htmlFor={`check-${mIndex}-${cIndex}`}>

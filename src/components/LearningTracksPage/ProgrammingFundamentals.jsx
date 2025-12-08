@@ -21,12 +21,12 @@ function ProgrammingFundamentals(){
       <div className="col-md-5">
         <div className="learning-card">
           <i className="bi bi-code-slash"></i>
-          <h5>Python Fundamentals</h5>
+          <h5>Data Science Using Python</h5>
           <p>
             Embark on your journey to becoming a proficient Python developer.
             This roadmap covers essential Python programming skills, from core syntax and logic to data structures and real-world projects.
           </p>
-          <Link to="/learning-tracks/programming-fundamentals/python-fundamentals" className="btn btn-primary">Start Learning</Link>
+          <Link to="/content/5/1" className="btn btn-primary">Start Learning</Link>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ function ProgrammingFundamentals(){
           <i className="bi bi-clipboard-check"></i>
           <h5>Web Development</h5>
           <p>Embark on your journey to becoming a full-stack web developer. This roadmap covers essential technologies from HTML to React, structured for clear progress and practical application.</p>
-          <Link to="/learning-tracks/programming-fundamentals/web-development" className="btn btn-primary">Start Learning</Link>
+          <Link to="/content/1/1" className="btn btn-primary">Start Learning</Link>
         </div>
       </div>
     </div>

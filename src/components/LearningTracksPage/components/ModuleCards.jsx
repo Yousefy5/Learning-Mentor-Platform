@@ -11,7 +11,8 @@ function ModuleCards({
   photo1,
   photo2,
   photo3,
-  theme
+  theme,
+  fieldId,articleId
 }) {
   return (
     <>
@@ -91,13 +92,13 @@ function ModuleCards({
                 <p className="card-text" style={{ color: theme.text }}>
                   {paragraphText3}
                 </p>
-                <a
-                  href="#"
+                {/* <Link
+                  to="/learning-tracks/fieldId/articleId"
                   className="btn btn-primary"
                   style={{ backgroundColor: theme.primary, border: "none" }}
                 >
                   View Resource
-                </a>
+                </Link> */}
               </div>
             </div>
           </div>

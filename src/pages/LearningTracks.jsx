@@ -18,7 +18,7 @@ function LearningTracks() {
             <div className="col-md-4">
               <div className="learning-card">
                 <i className="bi bi-code-slash"></i>
-                <h5>Programming Fundamentals</h5>
+                <h5>Web Development</h5>
                 <p>
                   Master the building blocks of coding, from logic and
                   algorithms to data structures, and start your journey in
