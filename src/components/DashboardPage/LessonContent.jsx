@@ -8,7 +8,6 @@ function LessonContent({ currentArticle, articlesInField, targetFieldId, lessons
     const navigate = useNavigate();
     const { updateProgress } = useProgress(); 
 
-    // جيب index المقال الحالي
     const currentIndex = articlesInField.findIndex(item => item.id === currentArticle.id);
     const total = articlesInField.length;
 
@@ -21,8 +20,7 @@ function LessonContent({ currentArticle, articlesInField, targetFieldId, lessons
             const nextArticle = articlesInField[currentIndex + 1];
             goToContent(nextArticle.id);
             
-    
-            const newPercentage = ((currentIndex + 2) / total) * 100;
+          const newPercentage = (((currentIndex + 2) / total) * 100).toFixed(0);
             updateProgress(targetFieldId, newPercentage); 
         }
     };

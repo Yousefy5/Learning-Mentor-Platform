@@ -21,15 +21,6 @@ function HeroSection() {
                 className="input-group rounded-pill overflow-hidden shadow-sm"
                 style={{ maxWidth: "420px" }}
               >
-                <input
-                  type="search"
-                  className="form-control border-0"
-                  placeholder="Search for learning tracks..."
-                  aria-label="Search for learning tracks"
-                />
-                <button className="btn btn-success px-4" type="submit">
-                  Search
-                </button>
               </div>
             </form>
           </div>

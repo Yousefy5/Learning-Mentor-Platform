@@ -11,45 +11,28 @@ function WebDevelopmentFundamentalsRoadmap() {
         TrackDescription="Embark on your journey to becoming a full-stack web developer. This roadmap covers essential technologies from HTML to React, structured for clear progress and practical application."
       />
       <ProgressBar />
-      <ModuleCards
-        theme={themes.default}
-        ModuleTitle="Module 1: Frontend Core Essentials"
-        title1="HTML Basics"
-        title2="CSS Basics"
-        title3="JavaScript Basics"
-        paragraphText1="Learn the foundation of web structure with HTML elements and attributes."
-        paragraphText2="Style web pages with CSS properties, layouts, and selectors."
-        paragraphText3="Learn interactivity and logic through JavaScript fundamentals."
-        photo1="/assests/Imgs/page3/HTM_Course.svg"
-        photo2="/assests/Imgs/page3/CSS_Course.svg"
-        photo3="/assests/Imgs/page3/JS_Course.svg"
-      />
-      <ModuleCards
-        theme={themes.default}
-        ModuleTitle="Module 2: Building Interactive UIs"
-        title1="DOM Manipulation"
-        title2="Events"
-        title3="Intro to Frameworks"
-        paragraphText1="Learn how to interact with the DOM to create dynamic experiences."
-        paragraphText2="Master event handling to make applications responsive and interactive."
-        paragraphText3="Get familiar with modern UI libraries like React."
-        photo1="/assests/Imgs/page3/DOM_Course.svg"
-        photo2="/assests/Imgs/page3/Events_Course.svg"
-        photo3="/assests/Imgs/page3/Framwork_Course.svg"
-      />
-      <ModuleCards
-        theme={themes.default}
-        ModuleTitle="Module 3: Advanced Concepts & Deployment"
-        title1="HTML Basics"
-        title2="CSS Basics"
-        title3="JavaScript Basics"
-        paragraphText1="Learn the foundation of web structure with HTML elements and attributes."
-        paragraphText2="Style web pages with CSS properties, layouts, and selectors."
-        paragraphText3="Learn interactivity and logic through JavaScript fundamentals."
-        photo1="/assests/Imgs/page3/HTM_Course.svg"
-        photo2="/assests/Imgs/page3/CSS_Course.svg"
-        photo3="/assests/Imgs/page3/JS_Course.svg"
-      />
+    <ModuleCards
+  theme={themes.default}
+  ModuleTitle="Module 1: Frontend Core Essentials"
+  
+  title1="Responsive Web Design Fundamentals"
+  paragraphText1="Learn the foundation of web structure."
+  photo1="/assests/Imgs/page3/HTM_Course.svg"
+  card1FieldId={1}
+  card1ArticleId={1}
+  
+  title2="CSS Styling and Modern Layout Techniques"
+  paragraphText2="Style web pages with CSS properties."
+  photo2="/assests/Imgs/page3/CSS_Course.svg"
+  card2FieldId={1}
+  card2ArticleId={7}
+  
+  title3="Modern JavaScript and ES6+ Features"
+  paragraphText3="Learn interactivity with JavaScript."
+  photo3="/assests/Imgs/page3/JS_Course.svg"
+  card3FieldId={1}
+  card3ArticleId={2}
+/>
     </>
   );
 }
